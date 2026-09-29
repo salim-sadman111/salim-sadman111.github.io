@@ -588,7 +588,11 @@ button{font:inherit;color:inherit}
 .lb-body img{width:100%;max-height:84vh;object-fit:contain;border-radius:12px}
 .lb-video{position:relative;aspect-ratio:16/9;width:100%;border-radius:12px;overflow:hidden;background:#000}
 .lb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.lb-cap{text-align:center;margin:12px 0 0;font-size:.9rem;color:#c3ccdb}
+.lb-foot{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 16px;margin-top:12px}
+.lb-cap{font-size:.9rem;color:#c3ccdb}
+.lb-yt{display:inline-flex;align-items:center;gap:5px;font-size:.88rem;color:#b8cfff}
+.lb-yt .ic{width:14px;height:14px}
+.lb-yt[hidden]{display:none}
 .lb-close{position:absolute;right:0;top:-48px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:22px;line-height:1;cursor:pointer}
 
 /* =====================================================================
@@ -1559,7 +1563,7 @@ button{font:inherit;color:inherit}
 <dialog class="lightbox" id="lightbox" aria-label="Media viewer">
   <button class="lb-close" type="button" aria-label="Close">×</button>
   <div class="lb-body"></div>
-  <p class="lb-cap"></p>
+  <div class="lb-foot"><span class="lb-cap"></span><a class="lb-yt" target="_blank" rel="noopener" hidden>Open on YouTube<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
 </dialog>
 
 <script>
@@ -1726,19 +1730,24 @@ button{font:inherit;color:inherit}
   });
 
   /* ---------------- Photos: show a photo if the file exists, else keep the schematic ---------------- */
-  const lb = $('#lightbox'), lbBody = $('.lb-body', lb), lbCap = $('.lb-cap', lb);
+  const lb = $('#lightbox'), lbBody = $('.lb-body', lb), lbCap = $('.lb-cap', lb), lbYt = $('.lb-yt', lb);
   function openLightbox({ src, alt, video, caption, cc }) {
     lbBody.textContent = '';
     if (video) {
       const w = d.createElement('div'); w.className = 'lb-video';
       const f = d.createElement('iframe');
-      f.src = `https://www.youtube-nocookie.com/embed/${video}?autoplay=1&rel=0` + (cc ? `&cc_load_policy=1&cc_lang_pref=${encodeURIComponent(cc)}` : '');
-      f.title = caption || 'Video';
-      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      /* Same permissions as YouTube's own embed code: clipboard-write makes "Copy link" work */
+      f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       f.allowFullscreen = true;
+      f.title = caption || 'YouTube video player';
+      f.src = `https://www.youtube.com/embed/${video}?autoplay=1&rel=0&playsinline=1` + (cc ? `&cc_load_policy=1&cc_lang_pref=${encodeURIComponent(cc)}` : '');
       w.appendChild(f); lbBody.appendChild(w);
+      lbYt.href = `https://youtu.be/${video}`;
+      lbYt.hidden = false;
     } else {
       const i = new Image(); i.src = src; i.alt = alt || ''; lbBody.appendChild(i);
+      lbYt.hidden = true;
     }
     lbCap.textContent = caption || alt || '';
     if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
