@@ -1,0 +1,2087 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salim Sadman — Mechanical Engineer · Robotics</title>
+<meta name="description" content="Salim Sadman, mechanical engineer (RUET) who builds robots from the actuator up: cycloidal QDD actuators, a 12-DoF quadruped and an ARC 2026 finalist Mars rover. Applying for robotics M.S./Ph.D., Fall 2027.">
+<meta name="author" content="Salim Sadman">
+<link rel="canonical" href="https://salim-sadman111.github.io/">
+<meta name="theme-color" content="#f6f5f0">
+
+<!-- Link previews (LinkedIn, WhatsApp, email) -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Salim Sadman">
+<meta property="og:title" content="Salim Sadman — Mechanical Engineer · Robotics">
+<meta property="og:description" content="Building robots from the actuator up: cycloidal QDD actuators, a 12-DoF quadruped and an ARC 2026 finalist Mars rover. Applying for robotics M.S./Ph.D., Fall 2027.">
+<meta property="og:url" content="https://salim-sadman111.github.io/">
+<meta property="og:image" content="https://salim-sadman111.github.io/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Salim Sadman — Mechanical Engineer · Robotics, with a line drawing of a cycloidal reducer">
+<meta property="profile:first_name" content="Salim">
+<meta property="profile:last_name" content="Sadman">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20fill='%231f4f9a'%20fill-rule='evenodd'%20d='M18.5%2012.0%2019.2%2013.5%2019.4%2013.6%2019.5%2013.8%2019.6%2014.0%2019.7%2014.3%2019.8%2014.7%2019.7%2015.1%2019.6%2015.6%2019.3%2016.0%2019.0%2016.4%2018.6%2016.6%2018.3%2016.7%2018.1%2016.7%2017.9%2016.7%2017.7%2016.7%2016.0%2017.1%2015.3%2018.6%2015.3%2018.8%2015.2%2019.0%2015.2%2019.2%2015.0%2019.5%2014.7%2019.8%2014.3%2020.0%2013.8%2020.2%2013.3%2020.2%2012.9%2020.2%2012.5%2020.1%2012.2%2019.9%2012.0%2019.7%2011.9%2019.6%2011.8%2019.4%2010.5%2018.3%208.9%2018.7%208.6%2018.8%208.5%2018.9%208.3%2019.0%208.0%2019.0%207.6%2019.0%207.1%2018.8%206.7%2018.6%206.3%2018.2%206.1%2017.8%205.9%2017.4%205.9%2017.1%205.9%2016.9%206.0%2016.7%206.1%2016.5%206.1%2014.8%204.8%2013.7%204.5%2013.7%204.4%2013.6%204.2%2013.5%203.9%2013.3%203.7%2012.9%203.6%2012.5%203.5%2012.0%203.6%2011.5%203.7%2011.0%203.9%2010.7%204.2%2010.4%204.4%2010.3%204.5%2010.2%204.8%2010.2%206.1%209.1%206.1%207.4%206.0%207.2%205.9%207.1%205.9%206.8%205.9%206.5%206.1%206.1%206.3%205.7%206.7%205.3%207.1%205.1%207.6%204.9%208.0%204.9%208.3%204.9%208.5%205.0%208.6%205.1%208.9%205.2%2010.5%205.6%2011.8%204.6%2011.9%204.3%2012.0%204.2%2012.2%204.0%2012.5%203.9%2012.9%203.7%2013.3%203.7%2013.8%203.7%2014.3%203.9%2014.7%204.1%2015.0%204.4%2015.2%204.7%2015.2%204.9%2015.3%205.1%2015.3%205.3%2016.0%206.8%2017.7%207.2%2017.9%207.2%2018.1%207.2%2018.3%207.2%2018.6%207.3%2019.0%207.5%2019.3%207.9%2019.6%208.3%2019.7%208.8%2019.8%209.2%2019.7%209.6%2019.6%2010.0%2019.5%2010.1%2019.4%2010.3%2019.2%2010.4ZM14.6%2012a2.6%202.6%200%201%201-5.2%200a2.6%202.6%200%201%201%205.2%200Z'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
+
+<script>
+  /* Runs before the page paints: picks the theme and turns on motion (unless the visitor prefers reduced motion). */
+  (function () {
+    var root = document.documentElement, saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', dark ? 'dark' : 'light');
+    root.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
+    /* Safety net: if the main script ever fails, show everything anyway. */
+    setTimeout(function () { if (!window.__siteReady) root.classList.remove('motion'); }, 4000);
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Salim Sadman",
+  "alternateName": "Salim Sadman Borshon",
+  "url": "https://salim-sadman111.github.io/",
+  "image": "https://salim-sadman111.github.io/images/profile.jpg",
+  "jobTitle": "Robotics Instructor",
+  "worksFor": { "@type": "Organization", "name": "Artificial Intelligence Bangladesh" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Rajshahi University of Engineering & Technology" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Rajshahi", "addressCountry": "BD" },
+  "knowsAbout": ["Robotics", "Actuator design", "Cycloidal reducers", "Motor control", "Legged locomotion", "Mechatronics"],
+  "sameAs": ["https://www.linkedin.com/in/salim-sadman/", "https://github.com/salim-sadman111"]
+}
+</script>
+
+<style>
+/* =====================================================================
+   1. DESIGN TOKENS (light / dark)
+   ===================================================================== */
+:root{
+  color-scheme:light;
+  --bg:#f6f5f0; --bg-2:#efede6; --surface:#ffffff; --surface-2:#fbfaf6;
+  --ink:#0f1a2b; --ink-2:#2d3849; --muted:#5b6778; --faint:#8b95a4;
+  --line:#e3e0d6; --line-2:#cfcabb;
+  --accent:#1f4f9a; --accent-strong:#173e7a; --on-accent:#ffffff;
+  --accent-soft:rgba(31,79,154,.08); --accent-soft-2:rgba(31,79,154,.17);
+  --warm:#c2410c; --warm-soft:rgba(194,65,12,.10);
+  --ok:#15803d;
+  --grid:rgba(31,79,154,.07); --grid-strong:rgba(31,79,154,.2);
+  --shadow-sm:0 1px 2px rgba(15,26,43,.05);
+  --shadow:0 1px 2px rgba(15,26,43,.04),0 10px 30px -14px rgba(15,26,43,.18);
+  --shadow-lg:0 2px 6px rgba(15,26,43,.05),0 28px 60px -24px rgba(15,26,43,.28);
+  --r-sm:8px; --r:14px; --r-lg:20px;
+  --serif:"Newsreader","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --nav-h:64px;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0a1120; --bg-2:#0d1628; --surface:#111b2e; --surface-2:#0f192b;
+  --ink:#e8eef8; --ink-2:#c3ccdb; --muted:#94a1b6; --faint:#6c7a91;
+  --line:#1d2940; --line-2:#2b3a57;
+  --accent:#8fb4ff; --accent-strong:#b8cfff; --on-accent:#0a1120;
+  --accent-soft:rgba(143,180,255,.10); --accent-soft-2:rgba(143,180,255,.22);
+  --warm:#fb923c; --warm-soft:rgba(251,146,60,.14);
+  --ok:#4ade80;
+  --grid:rgba(143,180,255,.06); --grid-strong:rgba(143,180,255,.18);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -14px rgba(0,0,0,.6);
+  --shadow-lg:0 2px 6px rgba(0,0,0,.35),0 28px 60px -24px rgba(0,0,0,.75);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0a1120; --bg-2:#0d1628; --surface:#111b2e; --surface-2:#0f192b;
+    --ink:#e8eef8; --ink-2:#c3ccdb; --muted:#94a1b6; --faint:#6c7a91;
+    --line:#1d2940; --line-2:#2b3a57;
+    --accent:#8fb4ff; --accent-strong:#b8cfff; --on-accent:#0a1120;
+    --accent-soft:rgba(143,180,255,.10); --accent-soft-2:rgba(143,180,255,.22);
+    --warm:#fb923c; --warm-soft:rgba(251,146,60,.14); --ok:#4ade80;
+    --grid:rgba(143,180,255,.06); --grid-strong:rgba(143,180,255,.18);
+  }
+}
+
+/* =====================================================================
+   2. BASE
+   ===================================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink-2);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+img,svg{display:block;max-width:100%}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4{color:var(--ink);margin:0;font-weight:500}
+p{margin:0 0 1em}
+ul,ol{margin:0;padding:0;list-style:none}
+strong{color:var(--ink);font-weight:600}
+em{font-style:italic}
+.thesis-line em,.edu-item em,.pub-venue em{font-family:var(--serif);font-size:1.07em;letter-spacing:0}
+abbr[title]{text-decoration:none;cursor:help}
+button{font:inherit;color:inherit}
+::selection{background:var(--accent-soft-2)}
+.wrap{width:min(1160px,calc(100% - 2 * clamp(16px,4vw,40px)));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px;transition:top .2s}
+.skip:focus{top:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ic{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* =====================================================================
+   3. NAVIGATION
+   ===================================================================== */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;background:var(--bg);background:color-mix(in srgb,var(--bg) 80%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.nav.scrolled{border-bottom-color:var(--line);box-shadow:var(--shadow-sm)}
+.nav-inner{height:100%;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font:600 1.08rem/1 var(--serif);letter-spacing:-.01em;white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand-mark{width:26px;height:26px;color:var(--accent);transition:transform 1s var(--ease)}
+.brand:hover .brand-mark{transform:rotate(-102.86deg)}
+.nav-links{position:relative;display:flex;gap:2px;margin-left:auto}
+.nav-links a{position:relative;padding:8px 10px;font-size:.9rem;color:var(--muted);border-radius:8px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--ink);text-decoration:none;background:var(--accent-soft)}
+.nav-links a.active{color:var(--ink)}
+.nav-indicator{position:absolute;bottom:1px;height:2px;border-radius:2px;background:var(--accent);left:0;width:0;opacity:0;transition:left .45s var(--ease),width .45s var(--ease),opacity .25s;pointer-events:none}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none}
+.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--warm));transform-origin:0 50%;transform:scaleX(0)}
+.icon-btn{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.icon-btn:hover{border-color:var(--line-2);transform:translateY(-1px)}
+.icon-btn svg{width:18px;height:18px}
+.menu-toggle{display:none}
+.menu-toggle path{stroke:currentColor;stroke-width:1.8;stroke-linecap:round;transition:transform .35s var(--ease),opacity .2s;transform-origin:12px 12px}
+.menu-toggle[aria-expanded="true"] .m1{transform:translateY(5px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] .m2{opacity:0}
+.menu-toggle[aria-expanded="true"] .m3{transform:translateY(-5px) rotate(-45deg)}
+.mobile-menu{position:fixed;left:0;right:0;top:var(--nav-h);z-index:49;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);padding:10px 0 18px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s,transform .35s var(--ease),visibility 0s .35s}
+.mobile-menu.open{opacity:1;visibility:visible;transform:none;transition:opacity .25s,transform .35s var(--ease),visibility 0s}
+.mobile-menu a{display:flex;justify-content:space-between;align-items:center;padding:13px 4px;border-bottom:1px dashed var(--line);color:var(--ink);font:500 1.15rem/1.2 var(--serif)}
+.mobile-menu a:hover{text-decoration:none;color:var(--accent)}
+.mobile-menu a span{font:500 .72rem/1 var(--mono);color:var(--faint);letter-spacing:.1em}
+.mobile-menu a.active{color:var(--accent)}
+
+/* Theme toggle: sun <-> moon */
+.sun-moon .core{transform-origin:12px 12px;transition:transform .6s var(--ease)}
+.sun-moon .cut{transition:transform .6s var(--ease)}
+.sun-moon .rays{transform-origin:12px 12px;transition:transform .6s var(--ease),opacity .4s}
+[data-theme="dark"] .sun-moon .core{transform:scale(1.55)}
+[data-theme="dark"] .sun-moon .cut{transform:translate(-8px,6px)}
+[data-theme="dark"] .sun-moon .rays{transform:rotate(60deg) scale(.4);opacity:0}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+
+/* =====================================================================
+   4. BUTTONS, TAGS, SMALL PARTS
+   ===================================================================== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;font:500 .93rem/1 var(--sans);border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .25s var(--ease),background .25s,border-color .25s,color .25s,box-shadow .25s}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn .ic{width:17px;height:17px}
+.btn .arrow{transition:transform .3s var(--ease)}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn-primary{background:var(--accent);color:var(--on-accent);box-shadow:0 6px 18px -8px var(--accent)}
+.btn-primary:hover{background:var(--accent-strong)}
+.btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-sm{height:34px;padding:0 14px;font-size:.84rem}
+.btn-sm .ic{width:15px;height:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tags li{font:500 .72rem/1 var(--mono);letter-spacing:.02em;padding:6px 9px;border-radius:6px;border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface-2);transition:border-color .2s,color .2s,background .2s}
+.tags li:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font:500 .72rem/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.badge{display:inline-flex;align-items:center;gap:7px;padding:4px 9px;border-radius:999px;font:500 .68rem/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.badge-live{color:var(--warm);background:var(--warm-soft)}
+.badge-live::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.motion .badge-live::before{animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.k{display:inline-block;font:500 .66rem/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--accent);background:var(--accent-soft);padding:4px 7px;border-radius:5px;margin-right:8px;vertical-align:.12em}
+.bullets li{position:relative;padding-left:20px;margin:0 0 9px;font-size:.96rem}
+.bullets li::before{content:"";position:absolute;left:3px;top:.62em;width:6px;height:6px;border:1.5px solid var(--accent);border-radius:1px;transform:rotate(45deg)}
+.mini-title{font:500 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.muted{color:var(--muted)}
+
+/* =====================================================================
+   5. HERO
+   ===================================================================== */
+.hero{position:relative;padding-top:var(--nav-h);isolation:isolate;overflow:hidden}
+.hero-grid,.hero-spot{position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px}
+.hero-grid{-webkit-mask-image:radial-gradient(ellipse 75% 70% at 65% 38%,#000 20%,transparent 78%);mask-image:radial-gradient(ellipse 75% 70% at 65% 38%,#000 20%,transparent 78%)}
+.hero-spot{background-image:linear-gradient(var(--grid-strong) 1px,transparent 1px),linear-gradient(90deg,var(--grid-strong) 1px,transparent 1px);opacity:0;transition:opacity .5s;-webkit-mask-image:radial-gradient(240px circle at var(--mx,50%) var(--my,40%),#000,transparent 72%);mask-image:radial-gradient(240px circle at var(--mx,50%) var(--my,40%),#000,transparent 72%)}
+.hero.spot-on .hero-spot{opacity:1}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,84px) clamp(28px,4vw,44px)}
+.status-pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 11px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface);font:500 .8rem/1.3 var(--sans);color:var(--ink-2);box-shadow:var(--shadow-sm)}
+.status-pill .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none}
+.motion .status-pill .dot{animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 55%,transparent)}75%,100%{box-shadow:0 0 0 9px transparent}}
+.hero-name{font:500 clamp(2.9rem,6.6vw,5rem)/1 var(--serif);letter-spacing:-.028em;margin:24px 0 14px;color:var(--ink)}
+.hero-role{font:500 .8rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.16em;color:var(--accent);margin:0 0 22px}
+.hero-role .sep{color:var(--faint);margin:0 .35em}
+.hero-lede{font:400 clamp(1.18rem,1.9vw,1.42rem)/1.5 var(--serif);color:var(--ink-2);max-width:36ch;margin:0 0 22px}
+.hl{color:var(--ink);background:linear-gradient(transparent 58%,var(--accent-soft-2) 58%,var(--accent-soft-2) 90%,transparent 90%) no-repeat 0 0/0% 100%;transition:background-size .9s var(--ease)}
+.hl.on{background-size:100% 100%}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:.9rem;margin:0 0 28px}
+.hero-meta li{display:flex;align-items:center;gap:7px}
+.hero-meta .ic{width:16px;height:16px;color:var(--faint)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.hero-links{display:flex;flex-wrap:wrap;gap:6px 18px}
+.hero-links a{display:inline-flex;align-items:center;gap:7px;color:var(--ink-2);font-size:.9rem;padding:4px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.hero-links a:hover{color:var(--accent);border-bottom-color:currentColor;text-decoration:none}
+.hero-links .ic{width:16px;height:16px}
+.hero-figure{margin:0;position:relative}
+.drawing{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:10px;cursor:grab;touch-action:pan-y;outline-offset:4px}
+.drawing.dragging{cursor:grabbing}
+.drawing-toggle{position:absolute;left:calc(4.4% + 10px);top:calc(4.6% + 10px);width:28px;height:28px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;opacity:.75;transition:opacity .2s,transform .2s}
+.drawing-toggle:hover{opacity:1;transform:scale(1.06)}
+.drawing-toggle svg{width:12px;height:12px}
+.drawing-toggle .i-play{display:none}
+.drawing-toggle[aria-pressed="true"] .i-play{display:block}
+.drawing-toggle[aria-pressed="true"] .i-pause{display:none}
+.hero-figure figcaption{margin:14px auto 0;max-width:52ch;font-size:.84rem;line-height:1.55;color:var(--muted);text-align:center}
+.motion .anim{opacity:0;animation:rise .9s var(--ease) forwards;animation-delay:calc(var(--d,0) * 90ms + 60ms)}
+@keyframes rise{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+
+/* Stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm);margin-bottom:clamp(44px,6vw,76px)}
+.stat{padding:22px 24px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat-num{display:block;font:500 clamp(1.9rem,3.1vw,2.45rem)/1 var(--serif);color:var(--ink);letter-spacing:-.02em;margin-bottom:9px;font-variant-numeric:tabular-nums}
+.stat-num small{font-size:.5em;color:var(--accent);letter-spacing:.02em;margin-left:2px;font-family:var(--mono);font-weight:500}
+.stat-label{font-size:.86rem;line-height:1.45;color:var(--muted)}
+
+/* =====================================================================
+   6. THE CYCLOIDAL REDUCER DRAWING
+   ===================================================================== */
+.reducer{width:100%;height:auto;user-select:none;-webkit-user-select:none}
+.reducer text{font-family:var(--mono);fill:var(--muted);letter-spacing:.08em}
+.reducer .rd-sheet{fill:none;stroke:var(--ink);stroke-width:1.1}
+.reducer .rd-border{fill:none;stroke:var(--ink);stroke-width:.7}
+.reducer .rd-zones text{font-size:6.5px;fill:var(--faint);text-anchor:middle;letter-spacing:0}
+.reducer .rd-zones path{stroke:var(--faint);stroke-width:.6}
+.reducer .rd-cl{stroke:var(--faint);stroke-width:.6;stroke-dasharray:16 3 2 3}
+.reducer .rd-housing{fill:url(#rd-hatch)}
+.reducer .rd-hatch-line{stroke:var(--faint);stroke-width:.6}
+.reducer .rd-edge{fill:none;stroke:var(--ink);stroke-width:1.1}
+.reducer .rd-bolt{fill:var(--surface);stroke:var(--ink);stroke-width:.8}
+.reducer .rd-pin{fill:var(--surface);stroke:var(--ink);stroke-width:1;transform-box:fill-box;transform-origin:center}
+.reducer .rd-disc{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.3;stroke-linejoin:round}
+.reducer .rd-cross{stroke:var(--accent);stroke-width:.8}
+.reducer .rd-flange{fill:none;stroke:var(--accent);stroke-width:.8;stroke-dasharray:4 3;opacity:.75}
+.reducer .rd-flange-mark{fill:var(--accent)}
+.reducer .rd-opin{fill:var(--surface);stroke:var(--accent);stroke-width:1.1}
+.reducer .rd-ball{fill:var(--surface);stroke:var(--ink);stroke-width:.6}
+.reducer .rd-cam{fill:var(--warm-soft);stroke:var(--warm);stroke-width:1.2}
+.reducer .rd-shaft{fill:var(--surface);stroke:var(--warm);stroke-width:1.3}
+.reducer .rd-crank{stroke:var(--warm);stroke-width:1.2;stroke-linecap:round}
+.reducer .rd-cam-dot{fill:var(--warm)}
+.reducer .rd-balloon circle{fill:var(--surface);stroke:var(--ink);stroke-width:.8}
+.reducer .rd-balloon text{font-size:7.5px;fill:var(--ink);text-anchor:middle;letter-spacing:0}
+.reducer .rd-leader{stroke:var(--ink);stroke-width:.6;fill:none}
+.reducer .rd-dot{fill:var(--ink)}
+.reducer .rd-rule{stroke:var(--ink);stroke-width:.7}
+.reducer .rd-h{font-size:6.6px;fill:var(--faint);letter-spacing:.16em}
+.reducer .rd-part{font-size:7.3px;fill:var(--ink)}
+.reducer .rd-sub{font-size:6.3px;fill:var(--faint)}
+.reducer .rd-dial{fill:none;stroke:var(--line-2);stroke-width:1}
+.reducer .rd-tick{stroke:var(--faint);stroke-width:.7}
+.reducer .rd-needle-in{stroke:var(--warm);stroke-width:1.7;stroke-linecap:round}
+.reducer .rd-needle-out{stroke:var(--accent);stroke-width:1.7;stroke-linecap:round}
+.reducer .rd-hub{fill:var(--ink)}
+.reducer .rd-val{font-size:7.1px;fill:var(--ink);text-anchor:middle;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.reducer .rd-ratio{font-size:9.5px;fill:var(--ink);text-anchor:middle;font-weight:500;letter-spacing:.04em}
+.reducer .rd-title{font-size:7.9px;fill:var(--ink);font-weight:500}
+.reducer .rd-small{font-size:6.5px}
+.reducer .rd-hint{font-size:7px;fill:var(--accent)}
+.reducer .sw-in{fill:var(--warm)}
+.reducer .sw-out{fill:var(--accent)}
+.reducer .sw-fixed{fill:var(--faint)}
+/* intro: the drawing "drafts itself" */
+.motion .reducer.intro .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s var(--ease) .15s forwards}
+.motion .reducer.intro .fade{opacity:0;animation:fadeIn .8s var(--ease) forwards;animation-delay:var(--t,0s)}
+.motion .reducer.intro .rd-pin{opacity:0;animation:pinIn .5s var(--ease) forwards;animation-delay:calc(.85s + var(--k,0) * 45ms)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes pinIn{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+
+/* =====================================================================
+   7. SECTIONS
+   ===================================================================== */
+.section{padding-block:clamp(64px,9vw,112px);position:relative}
+.band{background:var(--bg-2);border-block:1px solid var(--line)}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.sec-num{font:500 .78rem/1 var(--mono);color:var(--accent);letter-spacing:.1em}
+.sec-rule{display:block;height:1px;width:44px;background:var(--accent)}
+.motion .sec-rule{width:0;transition:width 1s var(--ease) .2s}
+.motion .sec-head.in .sec-rule,.motion .sec-head.done .sec-rule{width:44px}
+.sec-head h2{font:500 clamp(1.85rem,3.4vw,2.55rem)/1.1 var(--serif);letter-spacing:-.015em}
+.sec-intro{max-width:66ch;color:var(--muted);font-size:1.02rem;margin:0 0 clamp(28px,4vw,44px)}
+.sub-head{display:flex;align-items:center;gap:12px;font:500 1.4rem/1.2 var(--serif);margin:clamp(44px,5vw,64px) 0 18px}
+.sub-head::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* Reveal on scroll (only when motion is allowed) */
+.motion .reveal{opacity:0;translate:0 22px;transition:opacity .85s var(--ease),translate .85s var(--ease);transition-delay:calc(min(var(--i,0),6) * 80ms)}
+.motion .reveal.in{opacity:1;translate:0 0}
+
+/* =====================================================================
+   8. ABOUT + EDUCATION
+   ===================================================================== */
+.about-grid{display:grid;grid-template-columns:230px minmax(0,1fr) 300px;gap:clamp(24px,4vw,52px);align-items:start}
+.portrait{margin:0}
+.portrait-frame{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.portrait-frame .media-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait figcaption{margin-top:12px;font-size:.84rem;color:var(--muted);line-height:1.45}
+.portrait figcaption b{display:block;color:var(--ink);font:500 1rem/1.3 var(--serif)}
+.monogram{position:absolute;inset:0;display:grid;place-items:center;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:18px 18px;color:var(--accent);font:500 3.6rem/1 var(--serif);letter-spacing:.02em}
+.monogram::before{content:"";position:absolute;width:64%;aspect-ratio:1;border-radius:50%;border:1px dashed var(--accent-soft-2)}
+.motion .monogram::before{animation:spin 50s linear infinite}
+.has-img .monogram{display:none}
+.about-text .lead{font:400 clamp(1.18rem,1.7vw,1.32rem)/1.55 var(--serif);color:var(--ink)}
+.about-text p{font-size:1.01rem}
+.interests{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 22px 14px;box-shadow:var(--shadow-sm)}
+.interest-list li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px dashed var(--line);color:var(--ink);font-size:.95rem;line-height:1.4}
+.interest-list li:first-child{border-top:0;padding-top:0}
+.interest-list .ic{width:20px;height:20px;color:var(--accent);margin-top:0}
+.edu{margin-top:clamp(40px,5vw,60px)}
+.edu-list{border-top:1px solid var(--line)}
+.edu-item{display:grid;grid-template-columns:180px minmax(0,1fr);gap:28px;padding:22px 0;border-bottom:1px solid var(--line)}
+.edu-when{font:500 .8rem/1.7 var(--mono);color:var(--muted);letter-spacing:.03em}
+.edu-item h4{font:500 1.22rem/1.3 var(--serif)}
+.edu-item .org{color:var(--muted);margin:3px 0 10px;font-size:.95rem}
+.edu-item p{margin:0 0 7px;font-size:.95rem}
+.edu-item .small{font-size:.93rem;color:var(--muted);margin:0}
+
+/* =====================================================================
+   9. RESEARCH & PROJECTS
+   ===================================================================== */
+.media{position:relative;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background-color:var(--surface-2);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:20px 20px;background-position:-1px -1px}
+.media .media-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.media .fallback{position:absolute;inset:0}
+.media .fallback::after{content:attr(data-label);position:absolute;right:10px;bottom:10px;font:500 .6rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:5px 8px;border-radius:999px}
+.media.has-img .fallback{display:none}
+.media.has-img{cursor:zoom-in;background:none}
+.media.has-img:hover .media-img{transform:scale(1.035)}
+.video-btn{position:absolute;left:12px;bottom:12px;z-index:2;display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 14px 0 11px;border-radius:999px;border:0;background:rgba(10,17,32,.8);color:#fff;font:500 .82rem/1 var(--sans);cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .2s var(--ease),background .2s}
+.video-btn:hover{transform:translateY(-1px);background:rgba(10,17,32,.95)}
+.video-btn svg{width:13px;height:13px;fill:currentColor}
+.fig{margin:0}
+.fig figcaption,.media-cap{margin-top:10px;font-size:.84rem;line-height:1.55;color:var(--muted)}
+.fig-no{font:500 .7rem/1 var(--mono);letter-spacing:.1em;color:var(--accent);margin-right:6px;text-transform:uppercase}
+.feature{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:clamp(18px,2.6vw,30px);display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);grid-template-areas:"fig body" "status body" "figs figs";grid-template-rows:auto 1fr auto;gap:clamp(18px,2.4vw,28px) clamp(20px,3vw,40px)}
+.feature > .fig{grid-area:fig}
+.feature-body{grid-area:body}
+.feature > .status-line{grid-area:status;align-self:start;margin:0}
+.feature-figs{grid-area:figs}
+.feature::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;border-radius:var(--r-lg) var(--r-lg) 0 0;background:linear-gradient(90deg,var(--accent),var(--warm))}
+.feature h3{font:500 clamp(1.5rem,2.4vw,1.95rem)/1.15 var(--serif);letter-spacing:-.012em;margin-bottom:12px}
+.thesis-line{font-size:.93rem;color:var(--muted);margin-bottom:16px}
+.thesis-line em{color:var(--ink-2)}
+.status-line{display:flex;gap:10px;align-items:flex-start;margin:16px 0 0;padding:12px 14px;border-radius:10px;background:var(--surface-2);border:1px dashed var(--line-2);font-size:.9rem;color:var(--ink-2)}
+.status-line .k{flex:none;margin-top:2px}
+.feature-figs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,28px);padding-top:clamp(18px,2vw,24px);border-top:1px dashed var(--line)}
+.photo-strip{grid-column:1/-1;grid-row:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.photo-strip[hidden],.photo-strip figure[hidden]{display:none}
+.photo-strip figure{margin:0}
+.photo-strip figcaption{margin-top:8px;font-size:.82rem;color:var(--muted)}
+.proj-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px);margin-top:clamp(18px,2.4vw,28px);align-items:stretch}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-sm);overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--line-2)}
+.card::after{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--accent),var(--warm));transform:scaleX(0);transform-origin:0 50%;transition:transform .7s var(--ease);z-index:3}
+.card:hover::after{transform:scaleX(1)}
+.proj .media{border:0;border-bottom:1px solid var(--line);border-radius:0}
+.card-body{padding:20px 22px 24px}
+.card h3{font:500 1.34rem/1.22 var(--serif);letter-spacing:-.01em;margin-bottom:8px}
+.role{font-size:.88rem;color:var(--muted);margin:0 0 12px;line-height:1.5}
+
+/* ---------- Schematic figures (shown until a photo is added) ---------- */
+.schem{width:100%;height:100%;display:block}
+.schem text{font-family:var(--mono);fill:var(--muted)}
+.schem .s-cap{font-size:7.6px;letter-spacing:.1em}
+.schem .s-cap.warm{fill:var(--warm)}
+.schem .s-title{font-size:8.6px;font-weight:500;letter-spacing:.06em;fill:var(--ink)}
+.schem .s-sub{font-family:var(--sans);font-size:7.8px}
+.schem .s-count{font-family:var(--serif);font-size:27px;fill:var(--ink)}
+.schem .s-count-of{font-size:13px;fill:var(--muted)}
+.s-line{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.s-thin{fill:none;stroke:var(--ink);stroke-width:.8;stroke-linecap:round;opacity:.7}
+.s-fill{fill:var(--surface)}
+.s-hatch{stroke:var(--faint);stroke-width:.7}
+.s-leader{fill:none;stroke:var(--faint);stroke-width:.8}
+.s-box{fill:var(--surface);stroke:var(--ink);stroke-width:1.2}
+.s-box.accent{fill:var(--accent-soft);stroke:var(--accent)}
+.s-link{fill:none;stroke:var(--faint);stroke-width:1.2;stroke-linejoin:round}
+.s-link.dash{stroke-dasharray:3 4}
+.s-flow{fill:none;stroke:var(--accent);stroke-width:1.4;stroke-dasharray:4 4;stroke-linejoin:round}
+.s-flow.warm{stroke:var(--warm)}
+.s-arrowhead{fill:var(--accent)}
+.s-arrowhead.warm{fill:var(--warm)}
+.s-arrowhead.faint{fill:var(--faint)}
+.s-mag{stroke:var(--accent);stroke-width:2.2;stroke-linecap:round}
+.a-lobe{color:var(--accent)}
+.schem.is-playing .s-flow{animation:flow 1s linear infinite}
+.schem.is-playing .s-flow.slow{animation-duration:2.4s}
+@keyframes flow{to{stroke-dashoffset:-16}}
+.spin{transform-box:fill-box;transform-origin:center}
+.schem.is-playing .spin{animation:spin 1.1s linear infinite}
+.schem.is-playing .spin.slow{animation-duration:11s}
+.schem.is-playing .spin.rev{animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* quadruped */
+.q-far .s-line{stroke:var(--faint)}
+.q-j{fill:var(--surface);stroke:var(--ink);stroke-width:1.3;transition:fill .45s,stroke .45s}
+.q-j.far{stroke:var(--faint);stroke-dasharray:2.5 2}
+.q-j.on{fill:var(--accent);stroke:var(--accent)}
+.q-j.far.on{fill:var(--accent-soft-2);stroke:var(--accent)}
+.q-pulse{fill:none;stroke:var(--accent);stroke-width:1.2;transform-box:fill-box;transform-origin:center;animation:qpulse .9s var(--ease) forwards;pointer-events:none}
+@keyframes qpulse{from{opacity:.85;transform:scale(1)}to{opacity:0;transform:scale(2.6)}}
+/* bench */
+.pk{fill:var(--accent)}
+.pk.warm{fill:var(--warm)}
+.b-logger{transition:fill .3s}
+.b-logger.hit{fill:var(--accent-soft-2)}
+.b-row{stroke:var(--line-2);stroke-width:2.4;stroke-linecap:round;transition:stroke .35s}
+.b-row.hit{stroke:var(--accent)}
+/* glider */
+.g-path{fill:none;stroke:var(--accent);stroke-width:1;stroke-dasharray:2 4;opacity:.6}
+.g-sample{fill:var(--accent);transform-box:fill-box;transform-origin:center;animation:gs 6s linear forwards}
+.g-sample.static{animation:none;opacity:.5}
+@keyframes gs{0%{opacity:0;transform:scale(2.4)}8%{opacity:.95;transform:scale(1)}100%{opacity:0}}
+.g-bladder{fill:var(--warm);transform-box:fill-box;transform-origin:center;transition:transform .9s var(--ease)}
+.schem-glider.climb .g-bladder{transform:scale(1.7)}
+.g-wave{animation:wave 3.2s linear infinite;animation-play-state:paused}
+.schem.is-playing .g-wave{animation-play-state:running}
+@keyframes wave{to{transform:translateX(-50px)}}
+/* IoT */
+.i-ring{fill:none;stroke:var(--accent);stroke-width:1;opacity:0;transform-box:fill-box;transform-origin:center}
+.schem.is-playing .i-ring{animation:ring 2.4s var(--ease) infinite;animation-delay:var(--dl,0s)}
+.schem.is-playing .i-ring.d2{animation-delay:calc(var(--dl,0s) + 1.2s)}
+@keyframes ring{0%{opacity:.85;transform:scale(.35)}100%{opacity:0;transform:scale(2.6)}}
+.i-rays{transform-box:fill-box;transform-origin:center}
+.schem.is-playing .i-rays{animation:spin 30s linear infinite}
+.i-led{fill:var(--warm)}
+.schem.is-playing .i-led{animation:blink 1.6s steps(2,jump-none) infinite}
+.i-cloud{transition:fill .25s}
+.i-cloud.hit{fill:var(--accent-soft-2)}
+
+/* =====================================================================
+   10. PUBLICATIONS
+   ===================================================================== */
+.pubs{display:grid;gap:18px}
+.pub{display:grid;grid-template-columns:58px minmax(0,1fr);gap:22px;padding:clamp(20px,2.6vw,30px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-sm)}
+.pub-tag{display:grid;place-items:center;height:48px;border-radius:12px;background:var(--accent-soft);border:1px solid var(--accent-soft-2);color:var(--accent);font:500 .92rem/1 var(--mono)}
+.pub-title{font:500 clamp(1.15rem,1.8vw,1.32rem)/1.38 var(--serif);margin:8px 0 10px}
+.pub-authors{font-size:.95rem;margin-bottom:6px}
+.pub-authors strong{box-shadow:inset 0 -2px 0 var(--accent-soft-2)}
+.pub-venue{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.pub-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.bib{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.bib.open{grid-template-rows:1fr}
+.bib-inner{overflow:hidden;min-height:0}
+.bib-box{position:relative;margin-top:14px}
+.bib pre{margin:0;padding:16px 16px 16px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line);font:400 .76rem/1.65 var(--mono);color:var(--ink-2);overflow-x:auto;white-space:pre}
+.bib-copy{position:absolute;top:10px;right:10px}
+.name-note{font-size:.9rem;color:var(--muted);margin:-4px 0 26px}
+
+/* =====================================================================
+   11. EXPERIENCE TIMELINE
+   ===================================================================== */
+.timeline{position:relative;--x:190px}
+.timeline::before,.timeline::after{content:"";position:absolute;left:var(--x);top:8px;bottom:30px;width:2px;margin-left:-1px;border-radius:2px}
+.timeline::before{background:var(--line-2)}
+.timeline::after{background:linear-gradient(var(--accent),var(--warm));transform-origin:50% 0;transform:scaleY(var(--p,0))}
+.tl-item{position:relative;display:grid;grid-template-columns:calc(var(--x) - 26px) minmax(0,1fr);gap:52px;padding-bottom:26px}
+.tl-item::before{content:"";position:absolute;left:calc(var(--x) - 7px);top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg-2);border:2px solid var(--line-2);transition:background .35s,border-color .35s,transform .35s var(--ease);z-index:1}
+.tl-item.passed::before{background:var(--accent);border-color:var(--accent);transform:scale(1.12)}
+.tl-when{font:500 .8rem/1.8 var(--mono);color:var(--muted);text-align:right;letter-spacing:.02em}
+.tl-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;box-shadow:var(--shadow-sm);transition:border-color .3s,box-shadow .3s}
+.tl-card:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+.tl-card h3{font:500 1.2rem/1.3 var(--serif)}
+.tl-card .org{color:var(--muted);font-size:.9rem;margin:3px 0 8px;font-weight:500}
+.tl-card p{font-size:.94rem;margin:0}
+.tl-card p + p{margin-top:6px}
+
+/* =====================================================================
+   12. TEACHING, SERVICE, AWARDS, SKILLS, CONTACT
+   ===================================================================== */
+.teach-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(16px,2vw,24px);align-items:start}
+.teach-side{display:grid;gap:clamp(16px,2vw,24px)}
+.pad{padding:clamp(20px,2.4vw,28px)}
+.card.pad h3{margin-bottom:6px}
+.mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 18px}
+.mini-stats li{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.mini-stats b{display:block;font:500 1.7rem/1 var(--serif);color:var(--ink);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.mini-stats li > span{font-size:.8rem;color:var(--muted);line-height:1.35;display:block}
+.teach-main h4{margin-top:18px}
+.teach-photo{margin:0}
+.teach-photo[hidden]{display:none}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+.awards{border-top:1px solid var(--line)}
+.award{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:10px 24px;align-items:baseline;padding:20px 10px;border-bottom:1px solid var(--line);border-radius:10px;transition:background .3s}
+.award:hover{background:var(--surface)}
+.award-year{font:500 .84rem/1 var(--mono);color:var(--accent);letter-spacing:.04em}
+.award h3{font:500 1.14rem/1.35 var(--serif)}
+.award p{margin:4px 0 0;color:var(--muted);font-size:.92rem}
+.rank{justify-self:end;font:500 .68rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2);white-space:nowrap}
+.rank.gold{border-color:transparent;background:var(--warm-soft);color:var(--warm)}
+.rank.blue{border-color:transparent;background:var(--accent-soft);color:var(--accent)}
+.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
+.skill-head{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+.skill-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:var(--accent-soft);color:var(--accent);flex:none;transition:transform .5s var(--ease)}
+.card:hover .skill-icon{transform:rotate(-8deg) scale(1.06)}
+.skill-icon .ic{width:21px;height:21px}
+.skill-head h3{font:500 1.2rem/1.2 var(--serif);margin:0}
+.contact-card{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,60px);padding:clamp(24px,4vw,48px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.contact-card::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:radial-gradient(ellipse 60% 90% at 0% 100%,#000,transparent 70%);mask-image:radial-gradient(ellipse 60% 90% at 0% 100%,#000,transparent 70%)}
+.contact-card > *{position:relative}
+.contact-title{font:500 clamp(1.8rem,3.2vw,2.5rem)/1.12 var(--serif);letter-spacing:-.015em;margin-bottom:14px}
+.contact-list li{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:14px;align-items:center;padding:13px 0;border-bottom:1px dashed var(--line)}
+.contact-list li:first-child{padding-top:0}
+.contact-list .lbl{font:500 .7rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.contact-list a{overflow-wrap:anywhere}
+.copy-btn{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 11px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);font-size:.78rem;cursor:pointer;transition:border-color .2s,color .2s}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+.copy-btn .ic{width:14px;height:14px}
+.footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:.86rem}
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px}
+.footer p{margin:0}
+
+/* Back to top + toast + lightbox */
+.to-top{position:fixed;right:20px;bottom:20px;z-index:40;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);opacity:0;transform:translateY(14px) scale(.9);pointer-events:none;transition:opacity .35s,transform .35s var(--ease)}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover .ic{transform:translateY(-2px)}
+.to-top .ic{transition:transform .25s var(--ease)}
+.to-top .ring{position:absolute;inset:-1px;width:48px;height:48px;transform:rotate(-90deg);pointer-events:none}
+.to-top .ring circle{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:144.5;stroke-dashoffset:144.5;stroke-linecap:round}
+.toast{position:fixed;left:50%;bottom:24px;z-index:80;display:flex;align-items:center;gap:8px;max-width:calc(100% - 32px);padding:11px 16px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:.88rem;box-shadow:var(--shadow-lg);opacity:0;transform:translate(-50%,16px);transition:opacity .3s,transform .35s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast .ic{width:16px;height:16px;color:var(--ok)}
+.lightbox{border:0;padding:0;background:transparent;width:min(1100px,94vw);max-width:none;max-height:92vh;overflow:visible;color:#e8eef8}
+.lightbox::backdrop{background:rgba(5,9,18,.82);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.lightbox[open]{animation:pop .4s var(--ease)}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.lb-body img{width:100%;max-height:84vh;object-fit:contain;border-radius:12px}
+.lb-video{position:relative;aspect-ratio:16/9;width:100%;border-radius:12px;overflow:hidden;background:#000}
+.lb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.lb-cap{text-align:center;margin:12px 0 0;font-size:.9rem;color:#c3ccdb}
+.lb-close{position:absolute;right:0;top:-48px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:22px;line-height:1;cursor:pointer}
+
+/* =====================================================================
+   13. RESPONSIVE
+   ===================================================================== */
+@media (max-width:1100px){
+  .nav-links{display:none}
+  .menu-toggle{display:inline-grid}
+  .nav-actions{margin-left:auto}
+}
+@media (max-width:1020px){
+  .about-grid{grid-template-columns:200px minmax(0,1fr)}
+  .interests{grid-column:1/-1}
+  .proj-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-figure{max-width:600px;width:100%;margin-inline:auto}
+  .feature{grid-template-columns:minmax(0,1fr);grid-template-areas:"fig" "body" "status" "figs";grid-template-rows:none}
+  .teach-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .feature-figs{grid-template-columns:minmax(0,1fr)}
+  .contact-card{grid-template-columns:minmax(0,1fr)}
+  .service-grid,.skills-grid{grid-template-columns:minmax(0,1fr)}
+  .timeline{--x:7px}
+  .tl-item{grid-template-columns:minmax(0,1fr);gap:6px;padding-left:30px}
+  .tl-when{text-align:left}
+  .award{grid-template-columns:minmax(0,1fr) auto}
+  .award-year{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .about-grid{grid-template-columns:minmax(0,1fr)}
+  .portrait{max-width:220px}
+  .proj-grid{grid-template-columns:minmax(0,1fr)}
+  .edu-item{grid-template-columns:minmax(0,1fr);gap:4px}
+  .pub{grid-template-columns:minmax(0,1fr);gap:12px}
+  .pub-tag{width:52px;height:40px}
+  .mini-stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:8px}
+  .mini-stats li{padding:10px}
+  .mini-stats b{font-size:1.4rem}
+  .contact-list li{grid-template-columns:minmax(0,1fr) auto}
+  .contact-list .lbl{grid-column:1/-1}
+  .stat{padding:18px}
+  .hero-cta .btn{flex:1 1 auto}
+}
+
+/* =====================================================================
+   14. REDUCED MOTION + PRINT
+   ===================================================================== */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
+}
+@media print{
+  .nav,.mobile-menu,.to-top,.toast,.hero-figure,.hero-grid,.hero-spot,.pub-actions,.bib,.video-btn,.copy-btn,.skip{display:none!important}
+  body{background:#fff;color:#000}
+  .section,.band{padding:18px 0;background:none;border:0}
+  .hero{padding-top:0}
+  .hero-inner{grid-template-columns:1fr;padding:0}
+  .reveal,.anim{opacity:1!important;translate:none!important}
+  .card,.feature,.pub,.tl-card,.contact-card,.interests,.stats{box-shadow:none;break-inside:avoid}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<!-- =====================================================================
+     QUICK EDIT GUIDE
+     • Photos: add them to the /images folder with these exact names.
+       Each one is optional; until it exists, the page shows an animated
+       schematic in its place.
+         profile.jpg      portrait in "About" (portrait, about 4:5)
+         quadruped.jpg    Fig. 1, the assembled quadruped (landscape 16:10)
+         actuator.jpg     extra photo under the thesis figures
+         test-bench.jpg   extra photo under the thesis figures
+         rover.jpg        MEER 2.0 rover card
+         glider.jpg       underwater glider card
+         iot-node.jpg     IoT node card
+         teaching.jpg     workshop photo in "Teaching"
+     • Videos: paste a YouTube link into data-video="" on a project
+       (search this file for data-video). A "Watch video" button appears.
+     • CV: upload your PDF next to this file, named Salim_Sadman_CV.pdf
+     ===================================================================== -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="lobe" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.55 12.00 19.25 13.52 19.45 13.69 19.55 13.81 19.67 14.00 19.78 14.31 19.83 14.72 19.78 15.19 19.61 15.67 19.34 16.09 19.00 16.43 18.65 16.64 18.35 16.75 18.12 16.78 17.97 16.77 17.70 16.72 16.08 17.12 15.33 18.61 15.32 18.88 15.29 19.03 15.22 19.24 15.05 19.52 14.76 19.81 14.36 20.07 13.88 20.24 13.38 20.29 12.91 20.24 12.52 20.10 12.24 19.92 12.08 19.76 11.99 19.64 11.87 19.40 10.54 18.39 8.91 18.73 8.69 18.88 8.56 18.96 8.34 19.03 8.02 19.07 7.61 19.03 7.16 18.87 6.73 18.61 6.37 18.25 6.13 17.84 5.99 17.45 5.96 17.13 5.98 16.90 6.03 16.76 6.13 16.51 6.10 14.84 4.81 13.78 4.56 13.71 4.41 13.65 4.22 13.52 3.99 13.30 3.77 12.95 3.61 12.50 3.55 12.00 3.61 11.50 3.77 11.05 3.99 10.70 4.22 10.48 4.41 10.35 4.56 10.29 4.81 10.22 6.10 9.16 6.13 7.49 6.03 7.24 5.98 7.10 5.96 6.87 5.99 6.55 6.13 6.16 6.37 5.75 6.73 5.39 7.16 5.13 7.61 4.97 8.02 4.93 8.34 4.97 8.56 5.04 8.69 5.12 8.91 5.27 10.54 5.61 11.87 4.60 11.99 4.36 12.08 4.24 12.24 4.08 12.52 3.90 12.91 3.76 13.38 3.71 13.88 3.76 14.36 3.93 14.76 4.19 15.05 4.48 15.22 4.76 15.29 4.97 15.32 5.12 15.33 5.39 16.08 6.88 17.70 7.28 17.97 7.23 18.12 7.22 18.35 7.25 18.65 7.36 19.00 7.57 19.34 7.91 19.61 8.33 19.78 8.81 19.83 9.28 19.78 9.69 19.67 10.00 19.55 10.19 19.45 10.31 19.25 10.48ZM14.6 12a2.6 2.6 0 1 1-5.2 0a2.6 2.6 0 1 1 5.2 0Z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16.4c.6-1.5 1.8-2.3 3.2-2.3s2.6.8 3.2 2.3M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2.5 9 12 4.5 21.5 9 12 13.5z"/><path d="M6.5 11v4.6c1.5 1.4 3.5 2.2 5.5 2.2s4-.8 5.5-2.2V11M21.5 9v5"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M7 7h4v4c0 3-1.5 5-4 6M14 7h4v4c0 3-1.5 5-4 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M12 12 20 7.5M12 12v9M12 12 4 7.5"/></symbol>
+  <symbol id="i-motor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5v3M12 16.5v3M4.5 12h3M16.5 12h3"/></symbol>
+  <symbol id="i-legs" viewBox="0 0 24 24"><path d="M7 4h10M9.5 4 7 10.5l4 5-1 3.5M14.5 4 17 10.5l-4 5 1 3.5"/><path d="M3 20.5c1.5-.9 3-.9 4.5 0s3 .9 4.5 0 3-.9 4.5 0 3 .9 4.5 0"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.7 5.3 3.7 8.5s-1.3 6.1-3.7 8.5c-2.4-2.4-3.7-5.3-3.7-8.5S9.6 5.9 12 3.5z"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="m7 9.5 3 2.5-3 2.5M12.5 15H17"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7"/><path d="M12 2.5V5M12 19v2.5M21.5 12H19M5 12H2.5M18.7 5.3 17 7M7 17l-1.7 1.7M18.7 18.7 17 17M7 7 5.3 5.3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Salim Sadman, back to top">
+      <svg class="brand-mark" aria-hidden="true"><use href="#lobe"/></svg>
+      <span>Salim Sadman</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="Salim_Sadman_CV.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>CV</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="sun-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <mask id="moon-mask"><rect width="24" height="24" fill="#fff"/><circle class="cut" cx="26" cy="2" r="6.5" fill="#000"/></mask>
+          <circle class="core" cx="12" cy="12" r="4.6" fill="currentColor" mask="url(#moon-mask)"/>
+          <g class="rays" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 2.2v2.2M12 19.6v2.2M2.2 12h2.2M19.6 12h2.2M5.1 5.1l1.5 1.5M17.4 17.4l1.5 1.5M5.1 18.9l1.5-1.5M17.4 6.6l1.5-1.5"/>
+          </g>
+        </svg>
+      </button>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="m1" d="M4 7h16"/><path class="m2" d="M4 12h16"/><path class="m3" d="M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+<div class="mobile-menu" id="mobile-menu" inert>
+  <div class="wrap">
+    <a href="#about">About <span>01</span></a>
+    <a href="#research">Research <span>02</span></a>
+    <a href="#publications">Publications <span>03</span></a>
+    <a href="#experience">Experience <span>04</span></a>
+    <a href="#teaching">Teaching <span>05</span></a>
+    <a href="#awards">Awards <span>06</span></a>
+    <a href="#skills">Skills <span>07</span></a>
+    <a href="#contact">Contact <span>08</span></a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top" aria-label="Introduction">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-spot" aria-hidden="true"></div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="status-pill anim" style="--d:0"><span class="dot" aria-hidden="true"></span>Applying for Fall 2027 · M.S./Ph.D. in robotics</p>
+      <h1 class="hero-name anim" style="--d:1">Salim Sadman</h1>
+      <p class="hero-role anim" style="--d:2">Mechanical Engineer<span class="sep">·</span>Robotics</p>
+      <p class="hero-lede anim" style="--d:3">I build robots from the actuator up: <span class="hl">mechanism design</span>, <span class="hl">fabrication</span>, <span class="hl">PCBs</span>, <span class="hl">firmware</span> and <span class="hl">motor control</span>.</p>
+      <ul class="hero-meta anim" style="--d:4">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg><span>B.Sc. Mechanical Engineering, <abbr title="Rajshahi University of Engineering &amp; Technology">RUET</abbr></span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-brief"/></svg><span>Robotics Instructor, <abbr title="Artificial Intelligence Bangladesh">AIBD</abbr></span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Rajshahi, Bangladesh</span></li>
+      </ul>
+      <div class="hero-cta anim" style="--d:5">
+        <a class="btn btn-primary" href="Salim_Sadman_CV.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Download CV</a>
+        <a class="btn btn-ghost" href="#research">See my work<svg class="ic arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="hero-links anim" style="--d:6">
+        <li><a class="js-email" data-u="salim.sadman111" data-d="gmail.com" href="#contact"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email</a></li>
+        <li><a href="https://github.com/salim-sadman111" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/salim-sadman/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-card"/></svg>LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <figure class="hero-figure anim" style="--d:2">
+      <div class="drawing" tabindex="0" role="group" aria-label="Animated engineering drawing of a cycloidal reducer. The eccentric input shaft rolls a ten-lobed disc around eleven fixed pins, so the output turns ten times slower in the opposite direction. Drag, or use the arrow keys, to turn the input.">
+        <svg id="reducer" class="reducer intro" viewBox="0 0 440 400" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="rd-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="rd-hatch-line" x1="0" y1="0" x2="0" y2="5"/></pattern>
+          </defs>
+          <!-- drawing sheet -->
+          <rect class="rd-sheet draw" x="4" y="4" width="432" height="392" rx="3" pathLength="1"/>
+          <rect class="rd-border draw" x="16" y="16" width="408" height="368" pathLength="1"/>
+          <g class="rd-zones fade" style="--t:.55s">
+            <text x="67" y="12.4">1</text><text x="169" y="12.4">2</text><text x="271" y="12.4">3</text><text x="373" y="12.4">4</text>
+            <text x="67" y="392.4">1</text><text x="169" y="392.4">2</text><text x="271" y="392.4">3</text><text x="373" y="392.4">4</text>
+            <text x="10" y="80.4">A</text><text x="10" y="203.4">B</text><text x="10" y="326.4">C</text>
+            <text x="430" y="80.4">A</text><text x="430" y="203.4">B</text><text x="430" y="326.4">C</text>
+            <path d="M118 4v12M220 4v12M322 4v12M118 384v12M220 384v12M322 384v12M4 139h12M4 262h12M424 139h12M424 262h12"/>
+          </g>
+
+          <!-- mechanism (origin = reducer axis) -->
+          <g id="rd-core" transform="translate(170 172)">
+            <g class="fade" style="--t:.45s">
+              <line class="rd-cl" x1="-152" y1="0" x2="152" y2="0"/>
+              <line class="rd-cl" x1="0" y1="-152" x2="0" y2="152"/>
+            </g>
+            <g class="fade" style="--t:.65s">
+              <path class="rd-housing" fill-rule="evenodd" d="M132 0a132 132 0 1 0-264 0a132 132 0 1 0 264 0ZM104 0a104 104 0 1 0-208 0a104 104 0 1 0 208 0Z"/>
+              <circle class="rd-edge" r="132"/>
+              <circle class="rd-edge" r="104"/>
+              <g id="rd-bolts"></g>
+            </g>
+            <g id="rd-out-back" class="fade" style="--t:1.05s">
+              <circle class="rd-flange" r="74"/>
+              <path class="rd-flange-mark" d="M75 0l7-4.2v8.4z"/>
+            </g>
+            <g class="fade" style="--t:1.15s">
+              <g id="rd-disc">
+                <path id="rd-disc-path" class="rd-disc" fill-rule="evenodd" d=""/>
+                <path class="rd-cross" d="M-5 0h10M0-5v10"/>
+              </g>
+            </g>
+            <g id="rd-out-front" class="fade" style="--t:1.2s"></g>
+            <g id="rd-pins"></g>
+            <g class="fade" style="--t:1.25s"><g id="rd-balls"></g></g>
+            <g class="fade" style="--t:1.3s">
+              <g id="rd-input">
+                <circle class="rd-cam" cx="6.5" cy="0" r="19.5"/>
+                <circle class="rd-cam-dot" cx="20" cy="0" r="2"/>
+                <circle class="rd-shaft" r="8"/>
+                <path class="rd-crank" d="M0 0H6.5"/>
+                <path class="rd-crank" d="M-3 -6.2h6"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- balloons (item numbers) -->
+          <g class="fade" style="--t:1.45s">
+            <path class="rd-leader" d="M230 40.6 211.5 81"/><circle class="rd-dot" cx="211.5" cy="81" r="1.5"/>
+            <path class="rd-leader" d="M38 124 96.7 145.3"/><circle class="rd-dot" cx="96.7" cy="145.3" r="1.5"/>
+            <path class="rd-leader" d="M286.7 253.7 230.6 214.4"/><circle class="rd-dot" cx="230.6" cy="214.4" r="1.5"/>
+            <path class="rd-leader" d="M69.2 272.8 163.6 178.4"/><circle class="rd-dot" cx="163.6" cy="178.4" r="1.5"/>
+            <g class="rd-balloon"><circle cx="233.1" cy="33.7" r="7.5"/><text x="233.1" y="36.4">1</text></g>
+            <g class="rd-balloon"><circle cx="30.9" cy="121.4" r="7.5"/><text x="30.9" y="124.1">2</text></g>
+            <g class="rd-balloon"><circle cx="292.9" cy="258" r="7.5"/><text x="292.9" y="260.7">3</text></g>
+            <g class="rd-balloon"><circle cx="63.9" cy="278.1" r="7.5"/><text x="63.9" y="280.8">4</text></g>
+          </g>
+
+          <!-- right column: parts list + kinematics -->
+          <g class="fade" style="--t:1.55s">
+            <line class="rd-rule" x1="316" y1="16" x2="316" y2="318"/>
+            <text class="rd-h" x="324" y="33">PARTS LIST</text>
+            <g class="rd-balloon"><circle cx="328" cy="52" r="6.5"/><text x="328" y="54.6">1</text></g>
+            <text class="rd-part" x="340" y="54.6">RING PIN ×11</text>
+            <g class="rd-balloon"><circle cx="328" cy="76" r="6.5"/><text x="328" y="78.6">2</text></g>
+            <text class="rd-part" x="340" y="78.6">CYCLOIDAL DISC</text>
+            <text class="rd-sub" x="340" y="88.6">10 LOBES</text>
+            <g class="rd-balloon"><circle cx="328" cy="104" r="6.5"/><text x="328" y="106.6">3</text></g>
+            <text class="rd-part" x="340" y="106.6">OUTPUT FLANGE</text>
+            <text class="rd-sub" x="340" y="116.6">6 PINS · TO JOINT</text>
+            <g class="rd-balloon"><circle cx="328" cy="132" r="6.5"/><text x="328" y="134.6">4</text></g>
+            <text class="rd-part" x="340" y="134.6">ECCENTRIC INPUT</text>
+            <text class="rd-sub" x="340" y="144.6">FROM MOTOR</text>
+            <line class="rd-rule" x1="316" y1="160" x2="424" y2="160"/>
+            <text class="rd-h" x="324" y="176">KINEMATICS</text>
+            <g transform="translate(344 207)">
+              <circle class="rd-dial" r="17"/>
+              <path class="rd-tick" d="M0-17v3.5M17 0h-3.5M0 17v-3.5M-17 0h3.5"/>
+              <line id="rd-needle-in" class="rd-needle-in" x1="0" y1="0" x2="0" y2="-13"/>
+              <circle class="rd-hub" r="1.8"/>
+            </g>
+            <g transform="translate(398 207)">
+              <circle class="rd-dial" r="17"/>
+              <path class="rd-tick" d="M0-17v3.5M17 0h-3.5M0 17v-3.5M-17 0h3.5"/>
+              <line id="rd-needle-out" class="rd-needle-out" x1="0" y1="0" x2="0" y2="-13"/>
+              <circle class="rd-hub" r="1.8"/>
+            </g>
+            <text class="rd-h" x="344" y="238" text-anchor="middle">IN</text>
+            <text class="rd-h" x="398" y="238" text-anchor="middle">OUT</text>
+            <text id="rd-tin" class="rd-val" x="344" y="251">+0.00 rev</text>
+            <text id="rd-tout" class="rd-val" x="398" y="251">+0.000 rev</text>
+            <text class="rd-ratio" x="371" y="279">i = 10 : 1</text>
+            <text class="rd-sub" x="371" y="291" text-anchor="middle">OUTPUT REVERSED</text>
+          </g>
+
+          <!-- title block -->
+          <g class="fade" style="--t:1.65s">
+            <line class="rd-rule" x1="232" y1="318" x2="424" y2="318"/>
+            <line class="rd-rule" x1="232" y1="318" x2="232" y2="384"/>
+            <line class="rd-rule" x1="232" y1="340" x2="424" y2="340"/>
+            <line class="rd-rule" x1="232" y1="362" x2="424" y2="362"/>
+            <line class="rd-rule" x1="330" y1="340" x2="330" y2="362"/>
+            <line class="rd-rule" x1="382" y1="340" x2="382" y2="362"/>
+            <text class="rd-title" x="239" y="332.5">CYCLOIDAL REDUCER · PRINCIPLE</text>
+            <text class="rd-small" x="239" y="354">DRAWN S. SADMAN</text>
+            <text class="rd-small" x="336" y="354">RUET · ME</text>
+            <text class="rd-small" x="388" y="354">2026</text>
+            <text class="rd-small" x="239" y="376">ILLUSTRATIVE · NOT TO SCALE</text>
+          </g>
+
+          <!-- legend + hint -->
+          <g class="fade" style="--t:1.75s">
+            <text class="rd-hint" x="24" y="334">↻ DRAG TO TURN THE INPUT</text>
+            <rect class="sw-in" x="24" y="345" width="6" height="6" rx="1"/><text class="rd-small" x="35" y="350.5">INPUT · MOTOR SIDE</text>
+            <rect class="sw-out" x="24" y="357" width="6" height="6" rx="1"/><text class="rd-small" x="35" y="362.5">OUTPUT · JOINT SIDE</text>
+            <rect class="sw-fixed" x="24" y="369" width="6" height="6" rx="1"/><text class="rd-small" x="35" y="374.5">FIXED · HOUSING, RING PINS</text>
+          </g>
+        </svg>
+        <button class="drawing-toggle" type="button" aria-pressed="false" aria-label="Pause animation">
+          <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>
+        </button>
+      </div>
+      <figcaption>How the cycloidal reducer in my joint actuator works: an eccentric input rolls the lobed disc around fixed pins, so the output turns ten times slower and in reverse. Illustrative geometry; drag it to turn the input.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <ul class="stats" aria-label="Highlights">
+      <li class="stat reveal"><span class="stat-num"><span class="count" data-to="12">12</span></span><span class="stat-label">custom QDD actuators, designed and fabricated in-house</span></li>
+      <li class="stat reveal"><span class="stat-num">Finalist</span><span class="stat-label">Anatolian Rover Challenge 2026, as co-lead of Team Ogrodoot</span></li>
+      <li class="stat reveal"><span class="stat-num"><span class="count" data-to="80" data-suffix="+">80+</span></span><span class="stat-label">robotics, electronics and programming classes taught</span></li>
+      <li class="stat reveal"><span class="stat-num"><span class="count" data-to="500" data-suffix="+">500+</span></span><span class="stat-label">student engagements at Artificial Intelligence Bangladesh</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== ABOUT ============================== -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">01</span><span class="sec-rule"></span><h2 id="about-title">About</h2></div>
+
+    <div class="about-grid">
+      <figure class="portrait reveal">
+        <div class="portrait-frame media-slot" data-src="images/profile.jpg" data-alt="Portrait of Salim Sadman">
+          <div class="monogram" aria-hidden="true">SS</div>
+        </div>
+        <figcaption><b>Salim Sadman</b>Mechanical engineer, Rajshahi, Bangladesh</figcaption>
+      </figure>
+
+      <div class="about-text reveal">
+        <p class="lead">I’m a mechanical engineer who builds robots from the actuator up. For my B.Sc. thesis at RUET, supervised by Prof.&nbsp;Md. Emdadul&nbsp;Haque, I designed a cycloidal quasi-direct-drive (QDD) joint actuator, then fabricated and assembled all twelve of them and the 12-DoF quadruped they drive, a platform for studying locomotion on muddy terrain.</p>
+        <p>Alongside the thesis, I co-led Team Ogrodoot’s MEER&nbsp;2.0 Mars rover to the finals of the Anatolian Rover Challenge 2026, heading its mechanical sub-team. Earlier, as a hardware engineer at SystemSage Solutions, I built solar-powered IoT monitoring nodes, which led to a co-authored paper on the resulting smart-farming system at GEn-CITy&nbsp;2024.</p>
+        <p>I also teach: since January 2025 I have taught 80+ classes in robotics, electronics and programming at Artificial Intelligence Bangladesh, full-time since August 2026, and written its course modules. I’m applying to M.S. and Ph.D. programs in robotics for Fall 2027, and I’m drawn to labs that design and build their own hardware.</p>
+      </div>
+
+      <aside class="interests reveal" aria-labelledby="interests-title">
+        <h3 class="mini-title" id="interests-title">Research interests</h3>
+        <ul class="interest-list">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg>Robot design and fabrication</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-motor"/></svg>Actuator design and motor control</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-legs"/></svg>Legged locomotion on deformable terrain</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Field, space and marine robotics</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-chip"/></svg>Mechatronic system integration</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="edu">
+      <h3 class="mini-title reveal">Education</h3>
+      <ol class="edu-list">
+        <li class="edu-item reveal">
+          <div class="edu-when">Mar 2022 – Sep 2026</div>
+          <div>
+            <h4>B.Sc. in Mechanical Engineering</h4>
+            <p class="org">Rajshahi University of Engineering &amp; Technology (RUET), Rajshahi, Bangladesh</p>
+            <p><span class="k">CGPA</span>3.56 / 4.00</p>
+            <p><span class="k">Thesis</span><em>Design and Development of a Quadruped Robot for Optimizing Muddy Terrain Locomotion</em></p>
+            <p><span class="k">Supervisor</span>Prof. Md. Emdadul Haque, Department of Mechanical Engineering, RUET</p>
+          </div>
+        </li>
+        <li class="edu-item reveal">
+          <div class="edu-when">2020</div>
+          <div><h4>Higher Secondary Certificate (Science)</h4><p class="small">Dhaka College · GPA 5.00 / 5.00</p></div>
+        </li>
+        <li class="edu-item reveal">
+          <div class="edu-when">2017</div>
+          <div><h4>Secondary School Certificate (Science)</h4><p class="small">B.L. Govt. High School, Sirajganj · GPA 5.00 / 5.00</p></div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== RESEARCH ============================== -->
+<section class="section band" id="research" aria-labelledby="research-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">02</span><span class="sec-rule"></span><h2 id="research-title">Research &amp; Projects</h2></div>
+    <p class="sec-intro reveal">Selected projects, most substantial first. Each is hardware I designed and built, on my own or with a team.</p>
+
+    <!-- Thesis (featured) -->
+    <article class="feature reveal" data-video="">
+      <figure class="fig">
+        <div class="media media-slot" data-src="images/quadruped.jpg" data-alt="The assembled 12-DoF quadruped robot">
+          <div class="fallback" data-label="Schematic">
+            <svg class="schem schem-quad" data-anim="quad" viewBox="0 0 400 250" role="img" aria-labelledby="q-title">
+              <title id="q-title">Schematic of the 12-DoF quadruped: four legs with three actuated joints each; the body is designed to carry an IMU and a depth camera.</title>
+              <defs><pattern id="q-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line class="s-hatch" x1="0" y1="0" x2="0" y2="7"/></pattern></defs>
+              <text class="s-cap" x="20" y="30">ACTUATED JOINTS</text>
+              <text class="s-count" x="18" y="60"><tspan class="q-n">12</tspan><tspan class="s-count-of" dx="5">/ 12</tspan></text>
+              <text class="s-cap" x="200" y="62" text-anchor="middle">IMU</text>
+              <path class="s-leader" d="M200 66V94"/>
+              <text class="s-cap" x="382" y="62" text-anchor="end">DEPTH CAMERA</text>
+              <path class="s-leader" d="M352 66 318 90"/>
+              <rect x="16" y="214" width="368" height="9" fill="url(#q-hatch)"/>
+              <line class="s-line" x1="16" y1="214" x2="384" y2="214"/>
+              <g class="q-far">
+                <path class="s-line" d="M148 106 126 153 148 200"/>
+                <path class="s-line" d="M288 106 266 153 288 200"/>
+                <circle class="s-line s-fill" cx="148" cy="200" r="3.5"/>
+                <circle class="s-line s-fill" cx="288" cy="200" r="3.5"/>
+              </g>
+              <rect class="s-line s-fill" x="96" y="84" width="208" height="36" rx="7"/>
+              <rect class="s-line s-fill" x="304" y="91" width="15" height="18" rx="3"/>
+              <circle class="s-line" cx="313" cy="100" r="3.2"/>
+              <rect class="s-line s-fill" x="193" y="95" width="14" height="14" rx="2"/>
+              <path class="s-thin" d="M196.5 102h7M200 98.5v7"/>
+              <path class="s-line" d="M130 116 108 163 130 210"/>
+              <path class="s-line" d="M270 116 248 163 270 210"/>
+              <circle class="s-line s-fill" cx="130" cy="210" r="4"/>
+              <circle class="s-line s-fill" cx="270" cy="210" r="4"/>
+              <g class="q-joints">
+                <rect class="q-j on" data-o="1" x="260" y="88" width="20" height="9" rx="3"/>
+                <circle class="q-j on" data-o="2" cx="270" cy="116" r="8"/>
+                <circle class="q-j on" data-o="3" cx="248" cy="163" r="7"/>
+                <rect class="q-j far on" data-o="4" x="278" y="73" width="20" height="9" rx="3"/>
+                <circle class="q-j far on" data-o="5" cx="288" cy="106" r="7"/>
+                <circle class="q-j far on" data-o="6" cx="266" cy="153" r="6"/>
+                <rect class="q-j on" data-o="7" x="120" y="88" width="20" height="9" rx="3"/>
+                <circle class="q-j on" data-o="8" cx="130" cy="116" r="8"/>
+                <circle class="q-j on" data-o="9" cx="108" cy="163" r="7"/>
+                <rect class="q-j far on" data-o="10" x="138" y="73" width="20" height="9" rx="3"/>
+                <circle class="q-j far on" data-o="11" cx="148" cy="106" r="7"/>
+                <circle class="q-j far on" data-o="12" cx="126" cy="153" r="6"/>
+              </g>
+              <text class="s-cap" x="20" y="241">4 LEGS × 3 ACTUATED JOINTS = 12 DOF</text>
+            </svg>
+          </div>
+        </div>
+        <figcaption><span class="fig-no">Fig. 1</span><span class="cap-text" data-photo-caption="The assembled 12-DoF quadruped; its structure and all twelve actuators were fabricated in-house.">Joint layout of the 12-DoF quadruped: four legs with three actuated joints each, every one driven by the custom actuator. The body is designed to carry an IMU and a depth camera.</span></figcaption>
+      </figure>
+
+      <p class="status-line"><span class="k">Status</span><span>Built: the full 12-DoF structure and all twelve actuators, assembled. Next: locomotion experiments on mud and other deformable ground.</span></p>
+
+      <div class="feature-body">
+        <p class="eyebrow"><span class="badge badge-live">Ongoing</span>B.Sc. thesis research · RUET</p>
+        <h3>Quadruped Robot with Custom Cycloidal QDD Actuators</h3>
+        <p class="thesis-line">Thesis: <em>Design and Development of a Quadruped Robot for Optimizing Muddy Terrain Locomotion</em> · Supervisor: Prof. Md. Emdadul Haque</p>
+        <ul class="bullets">
+          <li>Designed a compact <strong>quasi-direct-drive joint actuator</strong> (BLDC motor, cycloidal reducer, encoder feedback and field-oriented control) for the torque density and backdrivability that legged locomotion needs.</li>
+          <li>Fabricated and assembled <strong>all twelve actuators</strong> and the robot’s full <strong>12-DoF structure</strong> in-house.</li>
+          <li>Built a <strong>motor-characterization test bench</strong> (ODrive v3.6 + ESP32) whose Python pipeline time-aligns controller telemetry (velocity, current, power, faults) with output-side measurements to map efficiency.</li>
+          <li>Designed the platform to carry <strong>IMU and depth-camera sensing</strong> for locomotion experiments on mud and other deformable ground.</li>
+        </ul>
+        <ul class="tags"><li>Actuator design</li><li>Cycloidal reducer</li><li>BLDC · FOC</li><li>Fabrication</li><li>Legged robots</li></ul>
+      </div>
+
+      <div class="feature-figs">
+        <figure class="fig">
+          <div class="media">
+            <svg class="schem schem-act" viewBox="0 0 400 250" role="img" aria-labelledby="a-title">
+              <title id="a-title">Block diagram of the joint actuator: an FOC driver powers the BLDC motor, whose shaft drives the cycloidal reducer and then the joint; an encoder on the motor feeds rotor angle back to the driver. The low reduction ratio keeps the joint backdrivable.</title>
+              <defs>
+                <marker id="a-ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="s-arrowhead" d="M0 1.5 9 5 0 8.5z"/></marker>
+                <marker id="a-arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="s-arrowhead warm" d="M0 1.5 9 5 0 8.5z"/></marker>
+              </defs>
+              <text class="s-cap" x="16" y="30">POWER PATH</text>
+              <text class="s-cap warm" x="280" y="53" text-anchor="middle">BACKDRIVABLE · LOW RATIO</text>
+              <path class="s-flow warm slow" d="M380 102V62H178V82" marker-end="url(#a-arw)"/>
+              <rect class="s-box" x="12" y="86" width="82" height="56" rx="8"/>
+              <text class="s-title" x="53" y="110" text-anchor="middle">FOC DRIVER</text>
+              <text class="s-sub" x="53" y="125" text-anchor="middle">current control</text>
+              <rect class="s-box" x="140" y="86" width="76" height="56" rx="8"/>
+              <text class="s-title" x="178" y="101" text-anchor="middle">BLDC MOTOR</text>
+              <g class="spin"><circle class="s-line" cx="178" cy="123" r="11"/><circle class="s-line" cx="178" cy="123" r="3"/><path class="s-mag" d="M178 113.5v3M178 129.5v3M168.5 123h3M184.5 123h3"/></g>
+              <rect class="s-box" x="262" y="86" width="76" height="56" rx="8"/>
+              <text class="s-title" x="300" y="101" text-anchor="middle">CYCLOIDAL</text>
+              <g class="spin slow rev"><use class="a-lobe" href="#lobe" x="289" y="111" width="22" height="22"/></g>
+              <circle class="s-line s-fill" cx="380" cy="114" r="11"/>
+              <circle class="s-line" cx="380" cy="114" r="3"/>
+              <text class="s-cap" x="380" y="141" text-anchor="middle">JOINT</text>
+              <path class="s-flow" d="M94 114H136" marker-end="url(#a-ar)"/>
+              <path class="s-flow" d="M216 114H258" marker-end="url(#a-ar)"/>
+              <path class="s-flow" d="M338 114H365" marker-end="url(#a-ar)"/>
+              <text class="s-cap" x="115" y="106" text-anchor="middle">3-PHASE</text>
+              <text class="s-cap" x="237" y="106" text-anchor="middle">SHAFT</text>
+              <text class="s-cap" x="352" y="106" text-anchor="middle">OUT</text>
+              <rect class="s-line s-fill" x="168" y="142" width="20" height="7" rx="2"/>
+              <path class="s-flow" d="M178 149V186H53V146" marker-end="url(#a-ar)"/>
+              <text class="s-cap" x="115" y="202" text-anchor="middle">ENCODER · ROTOR ANGLE</text>
+              <text class="s-cap" x="16" y="234">FEEDBACK LOOP</text>
+            </svg>
+          </div>
+          <figcaption><span class="fig-no">Fig. 2</span>Joint actuator. An FOC driver commutates the BLDC motor from encoder feedback; the cycloidal reducer’s low ratio keeps the joint backdrivable, which is what makes it quasi-direct-drive.</figcaption>
+        </figure>
+
+        <figure class="fig">
+          <div class="media">
+            <svg class="schem schem-bench" data-anim="bench" viewBox="0 0 400 250" role="img" aria-labelledby="b-title">
+              <title id="b-title">Data flow of the motor-characterization bench: an ODrive v3.6 drives the motor under test and reports velocity, current, power and faults; an ESP32 reads output-side sensors; a Python logger uses the ODrive polling loop as its master clock, reads the ESP32 on a background thread and writes one time-aligned CSV for efficiency mapping.</title>
+              <defs><marker id="b-ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="s-arrowhead faint" d="M0 1.5 9 5 0 8.5z"/></marker></defs>
+              <text class="s-cap" x="16" y="30">DATA PATH</text>
+              <path id="b-l1" class="s-link" d="M98 113H120V63H142"/>
+              <path id="b-l2" class="s-link" d="M98 137H120V187H142"/>
+              <path id="b-l3" class="s-link" d="M246 63H268V113H290" marker-end="url(#b-ar)"/>
+              <path id="b-l4" class="s-link" d="M246 187H268V137H290" marker-end="url(#b-ar)"/>
+              <path class="s-link" d="M357 150V171" marker-end="url(#b-ar)"/>
+              <rect class="s-box" x="14" y="100" width="84" height="50" rx="8"/>
+              <text class="s-title" x="56" y="122" text-anchor="middle">MOTOR</text>
+              <text class="s-sub" x="56" y="136" text-anchor="middle">under test</text>
+              <rect class="s-box" x="142" y="36" width="104" height="54" rx="8"/>
+              <text class="s-title" x="194" y="55" text-anchor="middle">ODRIVE v3.6</text>
+              <text class="s-sub" x="194" y="69" text-anchor="middle">velocity · current</text>
+              <text class="s-sub" x="194" y="80" text-anchor="middle">power · faults</text>
+              <rect class="s-box" x="142" y="160" width="104" height="54" rx="8"/>
+              <text class="s-title" x="194" y="183" text-anchor="middle">ESP32</text>
+              <text class="s-sub" x="194" y="197" text-anchor="middle">output-side sensors</text>
+              <rect class="s-box accent b-logger" x="290" y="100" width="98" height="50" rx="8"/>
+              <text class="s-title" x="339" y="121" text-anchor="middle">PYTHON LOGGER</text>
+              <text class="s-sub" x="339" y="135" text-anchor="middle">time alignment</text>
+              <text class="s-cap" x="274" y="83">POLLING LOOP</text>
+              <text class="s-cap" x="274" y="93">= MASTER CLOCK</text>
+              <text class="s-cap" x="274" y="164">SERIAL ·</text>
+              <text class="s-cap" x="274" y="174">BG THREAD</text>
+              <path class="s-line s-fill" d="M336 174h30l12 12v44h-42z"/>
+              <path class="s-line" d="M366 174v12h12"/>
+              <path class="b-row" d="M343 194h28"/>
+              <path class="b-row" d="M343 202h28"/>
+              <path class="b-row" d="M343 210h28"/>
+              <path class="b-row" d="M343 218h28"/>
+              <text class="s-cap" x="384" y="244" text-anchor="end">CSV → EFFICIENCY MAP</text>
+            </svg>
+          </div>
+          <figcaption><span class="fig-no">Fig. 3</span>Motor-characterization bench. The ODrive polling loop is the master clock; ESP32 output-side readings arrive on a background thread, and both are time-aligned into one CSV for efficiency mapping.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Optional extra photos: appear automatically once the files exist -->
+      <div class="photo-strip" hidden>
+        <figure hidden><div class="media media-slot" data-src="images/actuator.jpg" data-alt="One of the twelve cycloidal QDD actuators" data-optional></div><figcaption>One of the twelve QDD actuators</figcaption></figure>
+        <figure hidden><div class="media media-slot" data-src="images/test-bench.jpg" data-alt="Motor-characterization test bench" data-optional></div><figcaption>Motor-characterization test bench</figcaption></figure>
+      </div>
+    </article>
+
+    <div class="proj-grid">
+      <!-- Rover -->
+      <article class="card proj reveal" data-video="">
+        <div class="media media-slot" data-src="images/rover.jpg" data-alt="MEER 2.0 Mars rover built by Team Ogrodoot">
+          <div class="fallback" data-label="Schematic">
+            <svg class="schem schem-rover" data-anim="rover" viewBox="0 0 400 250" role="img" aria-labelledby="r-title">
+              <title id="r-title">Animated schematic of a four-wheel rocker-bogie rover with a robotic arm, its suspension following uneven ground.</title>
+              <defs><pattern id="r-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="s-hatch" x1="0" y1="0" x2="0" y2="8"/></pattern></defs>
+              <text class="s-cap" x="16" y="30">4-WHEEL ROCKER-BOGIE</text>
+              <text class="s-cap" x="384" y="30" text-anchor="end">5-DOF ARM</text>
+              <path class="s-leader r-leader" d="M352 35 252 85"/>
+              <path class="r-ground-fill" fill="url(#r-hatch)" d="M0 206H400V250H0Z"/>
+              <path class="s-line r-ground-line" d="M0 206H400"/>
+              <path class="s-line r-rocker" d="M145 189 200 159 255 189"/>
+              <g class="r-w1" transform="translate(145 189)"><circle class="s-line s-fill" r="17"/><path class="s-thin" d="M-17 0H17M-8.5-14.7 8.5 14.7M-8.5 14.7 8.5-14.7"/><circle class="s-line s-fill" r="4"/></g>
+              <g class="r-w2" transform="translate(255 189)"><circle class="s-line s-fill" r="17"/><path class="s-thin" d="M-17 0H17M-8.5-14.7 8.5 14.7M-8.5 14.7 8.5-14.7"/><circle class="s-line s-fill" r="4"/></g>
+              <g class="r-body" transform="translate(200 159)">
+                <line class="s-line" x1="0" y1="-12" x2="0" y2="0"/>
+                <rect class="s-line s-fill" x="-60" y="-42" width="120" height="30" rx="5"/>
+                <path class="s-thin" d="M-48-27h40"/>
+                <line class="s-line" x1="-46" y1="-42" x2="-46" y2="-66"/>
+                <rect class="s-line s-fill" x="-55" y="-76" width="18" height="10" rx="2"/>
+                <circle class="s-line s-fill" r="4"/>
+                <g transform="translate(40 -42)">
+                  <g class="r-a1">
+                    <line class="s-line" x1="0" y1="0" x2="12" y2="-32"/>
+                    <g class="r-a2" transform="translate(12 -32)">
+                      <line class="s-line" x1="0" y1="0" x2="40" y2="6"/>
+                      <g class="r-a3" transform="translate(40 6)">
+                        <line class="s-line" x1="0" y1="0" x2="10" y2="16"/>
+                        <path class="s-line" d="M10 16 5 24M10 16l6 7"/>
+                        <circle class="s-line s-fill" r="2.6"/>
+                      </g>
+                      <circle class="s-line s-fill" r="3"/>
+                    </g>
+                    <circle class="s-line s-fill" r="3.4"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="eyebrow">Team Ogrodoot · Oct 2024 – Sep 2026</p>
+          <h3>MEER 2.0 Mars Rover</h3>
+          <p class="role">Co-Lead &amp; Mechanical Sub-Team Lead (Aug 2025 – Sep 2026); Mechanical Design &amp; Fabrication (Oct 2024 – Aug 2025)</p>
+          <ul class="bullets">
+            <li>Designed and fabricated the rover’s mechanical system: a <strong>4-wheel rocker-bogie chassis</strong> with differential suspension, custom wheels and a <strong>5-DoF robotic arm</strong> with linear actuators and a motor-driven gripper.</li>
+            <li>Co-led the team to the <strong>finals of the Anatolian Rover Challenge (ARC) 2026</strong>; semi-finalists at IRDC 2025.</li>
+            <li>Ran <strong>20+ mentoring sessions</strong> on mechanical-team practice and Fusion 360 CAD.</li>
+          </ul>
+          <ul class="tags"><li>Rocker-bogie</li><li>Robotic arm</li><li>Fusion 360</li><li>Team lead</li></ul>
+        </div>
+      </article>
+
+      <!-- Glider -->
+      <article class="card proj reveal" data-video="">
+        <div class="media media-slot" data-src="images/glider.jpg" data-alt="Underwater glider for water-quality monitoring">
+          <div class="fallback" data-label="Principle">
+            <svg class="schem schem-glider" data-anim="glider" viewBox="0 0 400 250" role="img" aria-labelledby="g-title">
+              <title id="g-title">Animated principle of an underwater glider: changing its buoyancy makes it dive and climb in a sawtooth path while its sensors sample water quality.</title>
+              <defs><linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.03"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:.17"/></linearGradient></defs>
+              <rect x="0" y="46" width="400" height="204" fill="url(#g-water)"/>
+              <g class="g-wave"><path class="s-line" d="M-50 46q12.5-4 25 0t25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0 25 0"/></g>
+              <text class="s-cap" x="16" y="30">BUOYANCY-DRIVEN SAWTOOTH</text>
+              <text class="s-cap warm g-state" x="384" y="30" text-anchor="end">BUOYANCY − · DIVE</text>
+              <path class="s-thin" d="M6 76h6M6 106h6M6 136h6M6 166h6M6 196h6"/>
+              <path class="g-path" d="M24 62 100 178Q112 196 124 178L188 80Q200 62 212 80L276 178Q288 196 300 178L376 62"/>
+              <g class="g-samples"></g>
+              <g class="g-glider" transform="translate(66 126) rotate(56.8)">
+                <path class="s-line s-fill" d="M17 0c0-3.2-3.4-5-8-5H-12l-6 5 6 5H9c4.6 0 8-1.8 8-5z"/>
+                <path class="s-line" d="M-12-5-18-12h4l6 7"/>
+                <path class="s-line" d="M5 0-5 2"/>
+                <circle class="g-bladder" cx="11" cy="0" r="2.4"/>
+              </g>
+              <text class="s-cap" x="16" y="241">SENSORS: DO · ORP · TURBIDITY · TDS</text>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="eyebrow">Marine robotics · Environmental monitoring</p>
+          <h3>Underwater Glider for Aquatic Environmental Monitoring</h3>
+          <ul class="bullets">
+            <li>Developed an underwater glider with <strong>buoyancy-based depth control</strong>.</li>
+            <li>Integrated <strong>dissolved-oxygen, ORP, turbidity and TDS</strong> sensors for water-quality monitoring.</li>
+          </ul>
+          <ul class="tags"><li>Buoyancy control</li><li>Water-quality sensing</li><li>Marine robotics</li></ul>
+        </div>
+      </article>
+
+      <!-- IoT -->
+      <article class="card proj reveal" data-video="">
+        <div class="media media-slot" data-src="images/iot-node.jpg" data-alt="Solar-powered IoT monitoring and control node">
+          <div class="fallback" data-label="Schematic">
+            <svg class="schem schem-iot" data-anim="iot" viewBox="0 0 400 250" role="img" aria-labelledby="i-title">
+              <title id="i-title">Animated schematic of solar-powered sensor nodes in a field sending data to the cloud over LoRa, Wi-Fi and 4G LTE.</title>
+              <defs><pattern id="i-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="s-hatch" x1="0" y1="0" x2="0" y2="7"/></pattern></defs>
+              <text class="s-cap" x="16" y="30">SOLAR NODES → CLOUD</text>
+              <g><circle class="s-line s-fill" cx="44" cy="64" r="9"/><g class="i-rays"><path class="s-thin" d="M44 48v5M44 75v5M28 64h5M55 64h5M32.7 52.7l3.5 3.5M51.8 71.8l3.5 3.5M32.7 75.3l3.5-3.5M51.8 56.2l3.5-3.5"/></g></g>
+              <path class="s-line s-fill i-cloud" d="M300 76H362A12 12 0 0 0 362 52A17 17 0 0 0 330 44A13 13 0 0 0 306 54A11 11 0 0 0 300 76Z"/>
+              <text class="s-cap" x="331" y="67" text-anchor="middle">CLOUD</text>
+              <path id="i-l1" class="s-link dash" d="M98 112C150 70 250 60 302 66"/>
+              <path id="i-l2" class="s-link dash" d="M198 112C232 88 276 80 312 76"/>
+              <path id="i-l3" class="s-link dash" d="M298 112C304 100 316 90 326 78"/>
+              <text class="s-cap" x="200" y="63" text-anchor="middle">LoRa</text>
+              <text class="s-cap" x="256" y="101" text-anchor="middle">Wi-Fi</text>
+              <text class="s-cap" x="322" y="104">4G LTE</text>
+              <rect x="16" y="206" width="368" height="10" fill="url(#i-hatch)"/>
+              <line class="s-line" x1="16" y1="206" x2="384" y2="206"/>
+              <path class="s-thin" d="M30 206v-7m0 3-3-3m3 3 3-3M50 206v-7m0 3-3-3m3 3 3-3M130 206v-7m0 3-3-3m3 3 3-3M150 206v-7m0 3-3-3m3 3 3-3M230 206v-7m0 3-3-3m3 3 3-3M250 206v-7m0 3-3-3m3 3 3-3M340 206v-7m0 3-3-3m3 3 3-3M360 206v-7m0 3-3-3m3 3 3-3M380 206v-7m0 3-3-3m3 3 3-3"/>
+              <g transform="translate(92 0)" style="--dl:0s">
+                <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+                <rect class="s-line s-fill" x="-13" y="128" width="26" height="22" rx="3"/>
+                <path class="s-line s-fill" d="M-24 124 4 116 6 122-22 130Z"/>
+                <line class="s-line" x1="6" y1="128" x2="6" y2="114"/>
+                <circle class="s-line s-fill" cx="6" cy="112" r="2"/>
+                <circle class="i-ring" cx="6" cy="112" r="6"/><circle class="i-ring d2" cx="6" cy="112" r="6"/>
+                <text class="s-cap" x="-6" y="176" text-anchor="end">BME280</text>
+              </g>
+              <g transform="translate(192 0)" style="--dl:.5s">
+                <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+                <rect class="s-line s-fill" x="-13" y="128" width="26" height="22" rx="3"/>
+                <path class="s-line s-fill" d="M-24 124 4 116 6 122-22 130Z"/>
+                <line class="s-line" x1="6" y1="128" x2="6" y2="114"/>
+                <circle class="s-line s-fill" cx="6" cy="112" r="2"/>
+                <circle class="i-ring" cx="6" cy="112" r="6"/><circle class="i-ring d2" cx="6" cy="112" r="6"/>
+                <path class="s-line" d="M-10 206v14M-13 220h6"/>
+                <text class="s-cap" x="-16" y="176" text-anchor="end">NPK · RS485</text>
+              </g>
+              <g transform="translate(292 0)" style="--dl:1s">
+                <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+                <rect class="s-line s-fill" x="-13" y="128" width="26" height="22" rx="3"/>
+                <path class="s-line s-fill" d="M-24 124 4 116 6 122-22 130Z"/>
+                <line class="s-line" x1="6" y1="128" x2="6" y2="114"/>
+                <circle class="s-line s-fill" cx="6" cy="112" r="2"/>
+                <circle class="i-ring" cx="6" cy="112" r="6"/><circle class="i-ring d2" cx="6" cy="112" r="6"/>
+                <rect class="s-line s-fill" x="16" y="160" width="14" height="12" rx="2"/>
+                <circle class="i-led" cx="23" cy="166" r="2.4"/>
+                <path class="s-thin" d="M13 139h10v21"/>
+                <text class="s-cap" x="34" y="170">RELAY</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="eyebrow">SystemSage Solutions Sdn. Bhd. · Jan 2024 – Jan 2025</p>
+          <h3>Solar-Powered IoT Monitoring &amp; Control Nodes</h3>
+          <p class="role">IoT Engineer (Hardware Engineering)</p>
+          <ul class="bullets">
+            <li>Designed and prototyped <strong>ESP32-based PCBs</strong> for data acquisition and automation.</li>
+            <li>Built solar-powered nodes for remote deployment: ambient (BME280) and soil-nutrient (RS485 NPK) sensing, relay actuation, and <strong>LoRa, Wi-Fi, GPRS and 4G LTE</strong> telemetry.</li>
+            <li>Co-authored a paper on the resulting smart-farming system, published at <strong>GEn-CITy 2024</strong> <a href="#p1">[P1]</a>.</li>
+          </ul>
+          <ul class="tags"><li>PCB design</li><li>ESP32</li><li>LoRa · 4G LTE</li><li>Solar power</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PUBLICATIONS ============================== -->
+<section class="section" id="publications" aria-labelledby="pubs-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">03</span><span class="sec-rule"></span><h2 id="pubs-title">Publications</h2></div>
+    <p class="name-note reveal">Name in print: Salim Sadman Borshon.</p>
+    <ol class="pubs">
+      <li class="pub reveal" id="p1">
+        <div class="pub-tag" aria-label="Publication 1">P1</div>
+        <div>
+          <p class="eyebrow">Conference paper · IET Conference Proceedings · also in IEEE Xplore</p>
+          <h3 class="pub-title">An IoT-based smart farming solution for sustainable agriculture: integrating AI, cloud computing, and 4G communication for enhanced productivity</h3>
+          <p class="pub-authors">Mustahoshin Hossain Ahamed Afif, Javid Iqbal, <strong>Salim Sadman Borshon</strong>, Rashedul Islam Junayed, and Sabbir Ahamed</p>
+          <p class="pub-venue"><em>Proc. Int. Conf. on Green Energy, Computing and Intelligent Technology (GEn-CITy 2024)</em>, Malaysia (virtual), Dec. 2024. <em>IET Conference Proceedings</em>, vol. 2024, no. 30, pp. 83–88.</p>
+          <div class="pub-actions">
+            <a class="btn btn-ghost btn-sm" href="https://doi.org/10.1049/icp.2025.0238" target="_blank" rel="noopener">DOI 10.1049/icp.2025.0238<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+            <button class="btn btn-ghost btn-sm js-bib-toggle" type="button" aria-expanded="false" aria-controls="bib-p1"><svg class="ic" aria-hidden="true"><use href="#i-quote"/></svg>BibTeX</button>
+            <button class="btn btn-ghost btn-sm js-copy" type="button" data-copy-target="cite-p1" data-msg="Citation copied"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>Copy citation</button>
+          </div>
+          <div class="bib" id="bib-p1">
+            <div class="bib-inner">
+              <div class="bib-box">
+<pre><code id="bibtex-p1">@inproceedings{afif2024iot,
+  author    = {Afif, Mustahoshin Hossain Ahamed and Iqbal, Javid and
+               Borshon, Salim Sadman and Junayed, Rashedul Islam and
+               Ahamed, Sabbir},
+  title     = {An {IoT}-based smart farming solution for sustainable
+               agriculture: integrating {AI}, cloud computing, and {4G}
+               communication for enhanced productivity},
+  booktitle = {Proc. Int. Conf. on Green Energy, Computing and
+               Intelligent Technology (GEn-CITy 2024)},
+  series    = {IET Conference Proceedings},
+  volume    = {2024},
+  number    = {30},
+  pages     = {83--88},
+  year      = {2024},
+  publisher = {IET},
+  doi       = {10.1049/icp.2025.0238}
+}</code></pre>
+                <button class="copy-btn bib-copy js-copy" type="button" data-copy-target="bibtex-p1" data-msg="BibTeX copied"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>Copy</button>
+              </div>
+            </div>
+          </div>
+          <p id="cite-p1" hidden>M. H. A. Afif, J. Iqbal, S. S. Borshon, R. I. Junayed, and S. Ahamed, “An IoT-based smart farming solution for sustainable agriculture: integrating AI, cloud computing, and 4G communication for enhanced productivity,” in Proc. Int. Conf. on Green Energy, Computing and Intelligent Technology (GEn-CITy 2024), Malaysia (virtual), Dec. 2024, IET Conference Proceedings, vol. 2024, no. 30, pp. 83–88, doi: 10.1049/icp.2025.0238.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== EXPERIENCE ============================== -->
+<section class="section band" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">04</span><span class="sec-rule"></span><h2 id="exp-title">Experience</h2></div>
+    <p class="sec-intro reveal">Engineering roles, industrial training and coursework outside the degree.</p>
+    <ol class="timeline">
+      <li class="tl-item reveal">
+        <div class="tl-when">Jan 2025 – Present</div>
+        <div class="tl-card">
+          <h3>Robotics Instructor</h3>
+          <p class="org">Artificial Intelligence Bangladesh (AIBD) · full-time since Aug 2026</p>
+          <p>Teaching robotics, electronics and programming, and writing the organization’s course modules. <a href="#teaching">Details under Teaching</a>.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <div class="tl-when">Oct 2024 – Sep 2026</div>
+        <div class="tl-card">
+          <h3>Co-Lead &amp; Mechanical Sub-Team Lead</h3>
+          <p class="org">Team Ogrodoot · MEER 2.0 Mars Rover</p>
+          <p>Mechanical Design &amp; Fabrication Member (Oct 2024 – Aug 2025), then Co-Lead and head of the mechanical sub-team (Aug 2025 – Sep 2026). Rocker-bogie chassis, custom wheels and a 5-DoF arm; finals of ARC 2026.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <div class="tl-when">Mar 2025</div>
+        <div class="tl-card">
+          <h3>Industrial Attachment</h3>
+          <p class="org">Walton Hi-Tech Industries PLC · Department of Engineering Services Management, Chandra, Gazipur</p>
+          <p>Twenty working days (2–25 March 2025) studying high-volume manufacturing end to end, from refrigeration and HVAC assembly, PCB fabrication, battery packs, consumer electronics, fasteners and plastics recycling to the R&amp;D section, questioning line engineers on process and design decisions throughout.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <div class="tl-when">Dec 2024 – Feb 2025</div>
+        <div class="tl-card">
+          <h3>Basic Programming with Python (60 hours)</h3>
+          <p class="org">IICT, RUET · EDGE project of Bangladesh Computer Council, ICT Division</p>
+          <p>Fundamentals through introductory machine learning.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <div class="tl-when">Jan 2024 – Jan 2025</div>
+        <div class="tl-card">
+          <h3>IoT Engineer (Hardware Engineering)</h3>
+          <p class="org">SystemSage Solutions Sdn. Bhd.</p>
+          <p>ESP32-based PCBs and solar-powered monitoring and control nodes with LoRa, Wi-Fi, GPRS and 4G LTE telemetry; co-authored paper <a href="#p1">[P1]</a>.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== TEACHING & SERVICE ============================== -->
+<section class="section" id="teaching" aria-labelledby="teach-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">05</span><span class="sec-rule"></span><h2 id="teach-title">Teaching, Mentoring &amp; Service</h2></div>
+    <p class="sec-intro reveal">Since 2024 I have taught robotics, electronics, programming and CAD in workshops and courses, and mentored junior members of a university rover team.</p>
+
+    <div class="teach-grid">
+      <article class="card pad teach-main reveal">
+        <p class="eyebrow">Jan 2025 – Present · full-time since Aug 2026</p>
+        <h3>Robotics Instructor, Artificial Intelligence Bangladesh (AIBD)</h3>
+        <ul class="mini-stats">
+          <li><b><span class="count" data-to="80" data-suffix="+">80+</span></b><span>classes taught</span></li>
+          <li><b><span class="count" data-to="500" data-suffix="+">500+</span></b><span>student engagements</span></li>
+          <li><b><span class="count" data-to="5">5</span></b><span>regional &amp; national events organized</span></li>
+        </ul>
+        <p>Robotics, electronics and programming classes, taught at first alongside full-time undergraduate study.</p>
+        <h4 class="mini-title">Flagship programs</h4>
+        <ul class="bullets">
+          <li>15-day robotics and 3D-printing workshop, Bangladesh Computer Council, Rajshahi</li>
+          <li>4-day robotic-hand design and control workshop, American Corner Rajshahi</li>
+          <li>Robotic-hand session for IEEE RAS, University of Rajshahi</li>
+        </ul>
+        <h4 class="mini-title">Course modules I wrote</h4>
+        <ul class="tags"><li>Electronics</li><li>Robotics</li><li>Line-following robots</li><li>C programming</li><li>Python (incl. OOP)</li><li>CAD &amp; 3D printing</li><li>Line-follower kit manual</li></ul>
+        <p class="muted" style="font-size:.88rem;margin:14px 0 0">The kit manual is an illustrated assembly guide for AIBD’s line-follower kit (custom PCB, Arduino, IR sensors, PID control).</p>
+      </article>
+
+      <div class="teach-side">
+        <article class="card pad reveal">
+          <p class="eyebrow">2024 – 2025</p>
+          <h3>Workshop Instructor &amp; Organizer, Robotic Society of RUET</h3>
+          <p style="margin:0">Organized and taught three workshops (six classes, 200+ student engagements) on robotics, electronics, microcontrollers and PCB design.</p>
+        </article>
+        <article class="card pad reveal">
+          <p class="eyebrow">2025 – 2026</p>
+          <h3>Mentor, Team Ogrodoot</h3>
+          <p style="margin:0">Ran 20+ sessions for junior members on mechanical-team practice and CAD design in Fusion 360; closely involved in recruiting new members.</p>
+        </article>
+        <figure class="teach-photo" hidden>
+          <div class="media media-slot" data-src="images/teaching.jpg" data-alt="Teaching a robotics workshop" data-optional></div>
+          <figcaption class="media-cap">Teaching a robotics workshop.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h3 class="sub-head reveal">Leadership &amp; service</h3>
+    <div class="service-grid">
+      <article class="card pad reveal">
+        <p class="eyebrow">Nov 2023 – Aug 2026</p>
+        <h3>Robotic Society of RUET</h3>
+        <p class="role">General Secretary (2025–26) · Assistant Technical Secretary (2024–25) · Assistant Technical Coordinator (2023–24)</p>
+        <p style="margin:0">Secured sponsorship for and organized “Ro Te Robot”, a national robotics event; ran three annual recruitment drives.</p>
+      </article>
+      <article class="card pad reveal">
+        <p class="eyebrow">Feb 2025 – Sep 2026</p>
+        <h3>IEEE RUET Student Branch</h3>
+        <p class="role">Sponsorship Coordinator (2025–26) · Content Writer (2025)</p>
+        <p style="margin:0">Raised funding that launched several branch programs; ran a 2025 STEM outreach event at B.L. Govt. High School.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== AWARDS ============================== -->
+<section class="section band" id="awards" aria-labelledby="awards-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">06</span><span class="sec-rule"></span><h2 id="awards-title">Honors &amp; Awards</h2></div>
+    <ol class="awards">
+      <li class="award reveal"><span class="award-year">2026</span><div><h3>Anatolian Rover Challenge (ARC)</h3><p>International university rover competition · Team Ogrodoot</p></div><span class="rank gold">Finalist</span></li>
+      <li class="award reveal"><span class="award-year">2025</span><div><h3>International Rover Design Challenge (IRDC)</h3><p>Space Robotics Society · Team Ogrodoot</p></div><span class="rank blue">Semi-finalist</span></li>
+      <li class="award reveal"><span class="award-year">2025</span><div><h3>Poster Presentation, RUET Innovista</h3></div><span class="rank gold">1st place</span></li>
+      <li class="award reveal"><span class="award-year">2024</span><div><h3>Project Showcase, Astro Science Fair</h3><p>BSMR Novo Theatre, Rajshahi</p></div><span class="rank blue">2nd place</span></li>
+      <li class="award reveal"><span class="award-year">2023</span><div><h3>Line-Following Robot Competition, Tech-Mayhem</h3><p>Robotic Society of RUET</p></div><span class="rank gold">1st place</span></li>
+      <li class="award reveal"><span class="award-year">2012–2017</span><div><h3>Pre-university</h3><p>Champion, Regional Math Olympiad; 1st place, district Science Olympiad (National Science &amp; Technology Fest); two 1st places, a 2nd and a 3rd in district, division and inter-college project competitions.</p></div><span></span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== SKILLS ============================== -->
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">07</span><span class="sec-rule"></span><h2 id="skills-title">Skills</h2></div>
+    <div class="skills-grid">
+      <article class="card pad reveal">
+        <div class="skill-head"><span class="skill-icon"><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg></span><h3>Mechanical design</h3></div>
+        <ul class="tags"><li>Fusion 360</li><li>Fusion 360 Python API</li><li>Cycloidal reducers</li><li>Rocker-bogie suspension</li><li>Lead screws</li><li>Grippers</li><li>FDM printing: ABS, TPU</li><li>Ender-3 V2/V3</li><li>Bambu Lab P1S</li></ul>
+      </article>
+      <article class="card pad reveal">
+        <div class="skill-head"><span class="skill-icon"><svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg></span><h3>Actuation &amp; control</h3></div>
+        <ul class="tags"><li>BLDC motors</li><li>Field-oriented control (FOC)</li><li>ODrive</li><li>Encoder feedback</li><li>PID control</li><li>Motor characterization</li><li>Test-bench design</li></ul>
+      </article>
+      <article class="card pad reveal">
+        <div class="skill-head"><span class="skill-icon"><svg class="ic" aria-hidden="true"><use href="#i-chip"/></svg></span><h3>Embedded &amp; electronics</h3></div>
+        <ul class="tags"><li>ESP32</li><li>STM32</li><li>Arduino</li><li>PCB design (EasyEDA)</li><li>IMU &amp; depth camera</li><li>RS485</li><li>Water-quality sensors</li><li>LoRa</li><li>Wi-Fi</li><li>GPRS / 4G LTE</li><li>Solar power systems</li></ul>
+      </article>
+      <article class="card pad reveal">
+        <div class="skill-head"><span class="skill-icon"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg></span><h3>Programming</h3></div>
+        <ul class="tags"><li>C / C++</li><li>Python</li><li>Data acquisition &amp; telemetry pipelines</li><li>MATLAB</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="section band" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">08</span><span class="sec-rule"></span><h2 id="contact-title">Contact</h2></div>
+    <div class="contact-card reveal">
+      <div>
+        <h3 class="contact-title">Let’s talk research.</h3>
+        <p>I’m applying to M.S. and Ph.D. programs in robotics for Fall 2027. If my work fits your lab, I’d be glad to hear from you.</p>
+        <div class="hero-cta" style="margin:22px 0 0">
+          <a class="btn btn-primary js-email" data-u="salim.sadman111" data-d="gmail.com" data-subject="Research opportunities" href="#contact"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+          <a class="btn btn-ghost" href="Salim_Sadman_CV.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>CV (PDF)</a>
+        </div>
+      </div>
+      <ul class="contact-list">
+        <li><span class="lbl">Email</span><a class="js-email" data-u="salim.sadman111" data-d="gmail.com" data-show href="#contact">salim.sadman111 [at] gmail.com</a><button class="copy-btn js-copy-email" type="button" data-u="salim.sadman111" data-d="gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>Copy</button></li>
+        <li><span class="lbl">LinkedIn</span><a href="https://www.linkedin.com/in/salim-sadman/" target="_blank" rel="noopener">linkedin.com/in/salim-sadman</a><span></span></li>
+        <li><span class="lbl">GitHub</span><a href="https://github.com/salim-sadman111" target="_blank" rel="noopener">github.com/salim-sadman111</a><span></span></li>
+        <li><span class="lbl">Based in</span><span>Rajshahi, Bangladesh (UTC+6)</span><span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Salim Sadman</p>
+    <p>Last updated September 2026 · Plain HTML, CSS and JavaScript on GitHub Pages</p>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="Back to top">
+  <svg class="ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/></svg>
+  <svg class="ic" aria-hidden="true"><use href="#i-up"/></svg>
+</button>
+<div class="toast" role="status" aria-live="polite"></div>
+<dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+  <button class="lb-close" type="button" aria-label="Close">×</button>
+  <div class="lb-body"></div>
+  <p class="lb-cap"></p>
+</dialog>
+
+<script>
+(() => {
+  'use strict';
+  const d = document, root = d.documentElement, NS = 'http://www.w3.org/2000/svg';
+  const $ = (s, c = d) => c.querySelector(s);
+  const $$ = (s, c = d) => Array.from(c.querySelectorAll(s));
+  const mqReduce = matchMedia('(prefers-reduced-motion: reduce)');
+  let reduce = mqReduce.matches;
+  const svgEl = (tag, attrs, parent) => {
+    const n = d.createElementNS(NS, tag);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  };
+  const icon = id => `<svg class="ic" aria-hidden="true"><use href="#${id}"/></svg>`;
+
+  /* ---------------- Toast + clipboard ---------------- */
+  const toastEl = $('.toast');
+  let toastTimer;
+  function toast(msg) {
+    toastEl.innerHTML = icon('i-check') + '<span></span>';
+    toastEl.lastChild.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2000);
+  }
+  async function copyText(text) {
+    try { await navigator.clipboard.writeText(text); return true; }
+    catch (e) {
+      const ta = d.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0';
+      d.body.appendChild(ta); ta.select();
+      let ok = false; try { ok = d.execCommand('copy'); } catch (_) {}
+      ta.remove(); return ok;
+    }
+  }
+
+  /* ---------------- Theme (with a circular reveal where supported) ---------------- */
+  const themeBtn = $('.theme-toggle'), themeMeta = $('meta[name="theme-color"]');
+  function applyTheme(t) {
+    root.setAttribute('data-theme', t);
+    try { localStorage.setItem('theme', t); } catch (e) {}
+    themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    if (themeMeta) themeMeta.setAttribute('content', t === 'dark' ? '#0a1120' : '#f6f5f0');
+  }
+  applyTheme(root.getAttribute('data-theme') || 'light');
+  themeBtn.addEventListener('click', e => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    if (!d.startViewTransition || reduce) { applyTheme(next); return; }
+    const r = themeBtn.getBoundingClientRect();
+    const x = e.clientX || r.left + r.width / 2, y = e.clientY || r.top + r.height / 2;
+    const end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    const vt = d.startViewTransition(() => applyTheme(next));
+    vt.ready.then(() => {
+      root.animate({ clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${end}px at ${x}px ${y}px)`] },
+        { duration: 600, easing: 'cubic-bezier(.2,.7,.2,1)', pseudoElement: '::view-transition-new(root)' });
+    }).catch(() => {});
+  });
+
+  /* ---------------- Nav: shadow, progress bar, back-to-top ring, timeline ---------------- */
+  const nav = $('.nav'), bar = $('.progress span'), toTop = $('.to-top'), ring = $('.to-top .ring circle');
+  const RING = 2 * Math.PI * 23;
+  const tl = $('.timeline'), tlItems = tl ? $$('.tl-item', tl) : [];
+  let ticking = false;
+  function updateTimeline() {
+    if (!tl) return;
+    const r = tl.getBoundingClientRect();
+    const p = Math.max(0, Math.min(1, (innerHeight * 0.62 - r.top) / r.height));
+    tl.style.setProperty('--p', p.toFixed(4));
+    const reach = p * r.height;
+    tlItems.forEach(it => it.classList.toggle('passed', reach >= it.offsetTop + 12));
+  }
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      const y = scrollY, h = root.scrollHeight - innerHeight;
+      const p = h > 0 ? Math.min(1, y / h) : 0;
+      bar.style.transform = `scaleX(${p.toFixed(4)})`;
+      nav.classList.toggle('scrolled', y > 8);
+      toTop.classList.toggle('show', y > 700);
+      ring.style.strokeDashoffset = (RING * (1 - p)).toFixed(2);
+      updateTimeline();
+    });
+  }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  onScroll();
+  toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
+
+  /* ---------------- Scrollspy with a sliding indicator ---------------- */
+  const links = $$('.nav-links a'), mLinks = $$('.mobile-menu a'), indicator = $('.nav-indicator');
+  function setActive(id) {
+    let hit = null;
+    links.forEach(a => { const on = a.getAttribute('href') === '#' + id; a.classList.toggle('active', on); if (on) hit = a; });
+    mLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    if (hit && hit.offsetParent) {
+      indicator.style.left = (hit.offsetLeft + 10) + 'px';
+      indicator.style.width = (hit.offsetWidth - 20) + 'px';
+      indicator.style.opacity = '1';
+    } else indicator.style.opacity = '0';
+  }
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) setActive(en.target.id); });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  $$('main section[id]').forEach(s => spy.observe(s));
+
+  /* ---------------- Mobile menu ---------------- */
+  const menuBtn = $('.menu-toggle'), menu = $('#mobile-menu');
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    menu.inert = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  addEventListener('resize', () => { if (innerWidth > 1100) setMenu(false); });
+
+  /* ---------------- Count-up numbers ---------------- */
+  function countUp(el) {
+    if (el.dataset.done) return;
+    el.dataset.done = '1';
+    const to = +el.dataset.to, suf = el.dataset.suffix || '';
+    if (reduce) { el.textContent = to + suf; return; }
+    const dur = 1500, t0 = performance.now();
+    const step = t => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(to * e) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  if (!reduce) $$('.count').forEach(el => { el.textContent = '0' + (el.dataset.suffix || ''); });
+
+  /* ---------------- Reveal on scroll ---------------- */
+  const revealIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target;
+      el.classList.add('in');
+      revealIO.unobserve(el);
+      $$('.count', el).forEach(countUp);
+      /* once the entrance is done, hand the element back to its own hover transitions */
+      const done = ev => {
+        if (ev.target !== el) return;
+        el.removeEventListener('transitionend', done);
+        el.classList.add('done');
+        el.classList.remove('reveal', 'in');
+        el.style.removeProperty('--i');
+      };
+      el.addEventListener('transitionend', done);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+  $$('.reveal').forEach(el => {
+    const sibs = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
+    el.style.setProperty('--i', Math.max(0, sibs.indexOf(el)));
+    if (root.classList.contains('motion')) revealIO.observe(el);
+    else $$('.count', el).forEach(countUp);
+  });
+
+  /* ---------------- Photos: show a photo if the file exists, else keep the schematic ---------------- */
+  const lb = $('#lightbox'), lbBody = $('.lb-body', lb), lbCap = $('.lb-cap', lb);
+  function openLightbox({ src, alt, video, caption }) {
+    lbBody.textContent = '';
+    if (video) {
+      const w = d.createElement('div'); w.className = 'lb-video';
+      const f = d.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${video}?autoplay=1&rel=0`;
+      f.title = caption || 'Video';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      w.appendChild(f); lbBody.appendChild(w);
+    } else {
+      const i = new Image(); i.src = src; i.alt = alt || ''; lbBody.appendChild(i);
+    }
+    lbCap.textContent = caption || alt || '';
+    if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
+  }
+  lb.addEventListener('close', () => { lbBody.textContent = ''; });
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  $('.lb-close', lb).addEventListener('click', () => lb.close());
+
+  function loadSlot(slot) {
+    if (slot.dataset.state) return;
+    slot.dataset.state = 'loading';
+    const img = new Image();
+    img.decoding = 'async';
+    img.alt = slot.dataset.alt || '';
+    img.onload = () => {
+      slot.dataset.state = 'ok';
+      img.className = 'media-img';
+      slot.prepend(img);
+      slot.classList.add('has-img');
+      slot.tabIndex = 0;
+      slot.setAttribute('role', 'button');
+      slot.setAttribute('aria-label', 'Enlarge photo: ' + img.alt);
+      const open = () => openLightbox({ src: img.src, alt: img.alt });
+      slot.addEventListener('click', e => { if (!e.target.closest('.video-btn')) open(); });
+      slot.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      const cap = slot.closest('figure') && slot.closest('figure').querySelector('[data-photo-caption]');
+      if (cap) cap.textContent = cap.dataset.photoCaption;
+      const holder = slot.closest('[hidden]');
+      if (slot.hasAttribute('data-optional')) {
+        const fig = slot.closest('figure'); if (fig) fig.hidden = false;
+        const strip = slot.closest('.photo-strip'); if (strip) strip.hidden = false;
+      } else if (holder) holder.hidden = false;
+    };
+    img.onerror = () => { slot.dataset.state = 'none'; };
+    img.src = slot.dataset.src;
+  }
+  const lazyIO = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { lazyIO.unobserve(en.target); loadSlot(en.target); } });
+  }, { rootMargin: '600px 0px' });
+  $$('.media-slot[data-src]').forEach(s => s.hasAttribute('data-optional') ? loadSlot(s) : lazyIO.observe(s));
+
+  /* ---------------- YouTube: data-video="<link or id>" adds a Watch video button ---------------- */
+  const ytId = v => {
+    v = (v || '').trim(); if (!v) return '';
+    const m = v.match(/(?:youtu\.be\/|[?&]v=|embed\/|shorts\/|live\/)([\w-]{11})/);
+    return m ? m[1] : (/^[\w-]{11}$/.test(v) ? v : '');
+  };
+  $$('[data-video]').forEach(host => {
+    const id = ytId(host.dataset.video); if (!id) return;
+    const media = $('.media', host); if (!media) return;
+    const b = d.createElement('button');
+    b.type = 'button'; b.className = 'video-btn';
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>Watch video';
+    const title = ($('h3', host) || {}).textContent || 'Video';
+    b.addEventListener('click', e => { e.stopPropagation(); openLightbox({ video: id, caption: title }); });
+    media.appendChild(b);
+  });
+
+  /* ---------------- Email (assembled here so scrapers don't see it) ---------------- */
+  $$('.js-email').forEach(a => {
+    const addr = a.dataset.u + '@' + a.dataset.d;
+    a.href = 'mailto:' + addr + (a.dataset.subject ? '?subject=' + encodeURIComponent(a.dataset.subject) : '');
+    if (a.hasAttribute('data-show')) a.textContent = addr;
+  });
+  $$('.js-copy-email').forEach(b => b.addEventListener('click', async () => {
+    const addr = b.dataset.u + '@' + b.dataset.d;
+    if (await copyText(addr)) toast('Email copied: ' + addr);
+  }));
+
+  /* ---------------- BibTeX panel + copy buttons ---------------- */
+  $$('.js-bib-toggle').forEach(btn => {
+    const panel = d.getElementById(btn.getAttribute('aria-controls'));
+    panel.inert = true;
+    btn.addEventListener('click', () => {
+      const open = !panel.classList.contains('open');
+      panel.classList.toggle('open', open);
+      panel.inert = !open;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+  $$('.js-copy').forEach(b => b.addEventListener('click', async () => {
+    const t = (d.getElementById(b.dataset.copyTarget) || {}).textContent;
+    if (t && await copyText(t.trim())) toast(b.dataset.msg || 'Copied');
+  }));
+
+  /* ---------------- Hero: cursor spotlight on the grid + highlighted words ---------------- */
+  const hero = $('.hero');
+  if (matchMedia('(pointer: fine)').matches && !reduce) {
+    hero.addEventListener('pointermove', e => {
+      const r = hero.getBoundingClientRect();
+      hero.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      hero.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      hero.classList.add('spot-on');
+    });
+    hero.addEventListener('pointerleave', () => hero.classList.remove('spot-on'));
+  }
+  $$('.hero-lede .hl').forEach((s, i) => reduce ? s.classList.add('on') : setTimeout(() => s.classList.add('on'), 1100 + i * 300));
+
+  /* =================================================================
+     Animation loop: runs only what is on screen, pauses in hidden tabs
+     ================================================================= */
+  const loops = new Set();
+  let raf = 0, last = 0;
+  function tick(t) {
+    const dt = Math.min(0.05, (t - last) / 1000 || 0);
+    last = t;
+    loops.forEach(l => l.step(dt, t));
+    raf = loops.size ? requestAnimationFrame(tick) : 0;
+  }
+  function play(l, force) { if (reduce && !force) return; loops.add(l); if (!raf && !d.hidden) { last = performance.now(); raf = requestAnimationFrame(tick); } }
+  function pause(l) { loops.delete(l); }
+  d.addEventListener('visibilitychange', () => {
+    if (d.hidden) { cancelAnimationFrame(raf); raf = 0; }
+    else if (loops.size && !raf) { last = performance.now(); raf = requestAnimationFrame(tick); }
+  });
+
+  /* ---------------- Hero drawing: a working cycloidal reducer ---------------- */
+  function initReducer() {
+    const svg = $('#reducer'); if (!svg) return;
+    const N = 11, Z = N - 1, R = 100, RR = 8.5, E = 6.5, M = 6, RH = 52, ROP = 9, BORE = 24;
+    const TAU = Math.PI * 2, DEG = 180 / Math.PI;
+    const core = $('#rd-core', svg);
+    const circ = (cx, cy, r) => `M${(cx + r).toFixed(2)} ${cy.toFixed(2)}a${r} ${r} 0 1 0 ${-2 * r} 0a${r} ${r} 0 1 0 ${2 * r} 0Z`;
+
+    /* disc profile = pin-centre epitrochoid offset inward by the pin radius */
+    let p = '';
+    const S = 600;
+    for (let i = 0; i <= S; i++) {
+      const b = i / S * TAU;
+      const px = R * Math.cos(b) - E * Math.cos(N * b), py = R * Math.sin(b) - E * Math.sin(N * b);
+      const tx = -R * Math.sin(b) + E * N * Math.sin(N * b), ty = R * Math.cos(b) - E * N * Math.cos(N * b);
+      const L = Math.hypot(tx, ty);
+      p += (i ? 'L' : 'M') + (px - RR * ty / L).toFixed(2) + ' ' + (py + RR * tx / L).toFixed(2);
+    }
+    p += 'Z';
+    for (let j = 0; j < M; j++) { const a = j / M * TAU; p += circ(RH * Math.cos(a), RH * Math.sin(a), ROP + E); }
+    p += circ(0, 0, BORE);
+    $('#rd-disc-path', svg).setAttribute('d', p);
+
+    const pins = $('#rd-pins', svg);
+    for (let k = 0; k < N; k++) { const a = k / N * TAU; svgEl('circle', { class: 'rd-pin', cx: (R * Math.cos(a)).toFixed(2), cy: (R * Math.sin(a)).toFixed(2), r: RR, style: '--k:' + k }, pins); }
+    const bolts = $('#rd-bolts', svg);
+    for (let k = 0; k < 6; k++) { const a = (k + 0.5) / 6 * TAU; svgEl('circle', { class: 'rd-bolt', cx: (119 * Math.cos(a)).toFixed(2), cy: (119 * Math.sin(a)).toFixed(2), r: 3.6 }, bolts); }
+    const outF = $('#rd-out-front', svg);
+    for (let j = 0; j < M; j++) { const a = j / M * TAU; svgEl('circle', { class: 'rd-opin', cx: (RH * Math.cos(a)).toFixed(2), cy: (RH * Math.sin(a)).toFixed(2), r: ROP }, outF); }
+    const balls = $('#rd-balls', svg);
+    for (let i = 0; i < 10; i++) { const a = i / 10 * TAU; svgEl('circle', { class: 'rd-ball', cx: (21.75 * Math.cos(a)).toFixed(2), cy: (21.75 * Math.sin(a)).toFixed(2), r: 2.05 }, balls); }
+
+    const disc = $('#rd-disc', svg), input = $('#rd-input', svg), outB = $('#rd-out-back', svg);
+    const nIn = $('#rd-needle-in', svg), nOut = $('#rd-needle-out', svg), tIn = $('#rd-tin', svg), tOut = $('#rd-tout', svg);
+    const THETA0 = 0.9;
+    let theta = THETA0;
+    const sign = (v, n) => (v < -0.0005 ? '−' : '+') + Math.abs(v).toFixed(n);
+    function render() {
+      const ex = E * Math.cos(theta), ey = E * Math.sin(theta), a = -theta / Z;
+      const aD = (a * DEG).toFixed(3), tD = (theta * DEG).toFixed(3), tr = `translate(${ex.toFixed(3)} ${ey.toFixed(3)})`;
+      disc.setAttribute('transform', `${tr} rotate(${aD})`);
+      outB.setAttribute('transform', `rotate(${aD})`);
+      outF.setAttribute('transform', `rotate(${aD})`);
+      input.setAttribute('transform', `rotate(${tD})`);
+      balls.setAttribute('transform', `${tr} rotate(${((theta + a) / 2 * DEG).toFixed(3)})`);
+      nIn.setAttribute('transform', `rotate(${tD})`);
+      nOut.setAttribute('transform', `rotate(${aD})`);
+      const rev = (theta - THETA0) / TAU;
+      tIn.textContent = sign(rev, 2) + ' rev';
+      tOut.textContent = sign(-rev / Z, 3) + ' rev';
+    }
+    render();
+
+    /* spin, drag, keys, pause */
+    const wrapEl = svg.closest('.drawing'), btn = $('.drawing-toggle', wrapEl);
+    const OMEGA = TAU * 0.3;
+    let speed = 0, dragging = false, lastAng = 0, userPaused = reduce, userStarted = false, visible = true;
+    const loop = { step(dt) { if (dragging) return; speed = Math.min(1, speed + dt / 1.4); theta += dt * OMEGA * (speed * speed * (3 - 2 * speed)); render(); } };
+    const sync = () => { (visible && !userPaused) ? play(loop, userStarted) : pause(loop); };
+    function setPaused(v) {
+      userPaused = v;
+      btn.setAttribute('aria-pressed', String(v));
+      btn.setAttribute('aria-label', v ? 'Play animation' : 'Pause animation');
+      if (!v) speed = Math.min(speed, 0.2);
+      sync();
+    }
+    btn.setAttribute('aria-pressed', String(userPaused));
+    btn.setAttribute('aria-label', userPaused ? 'Play animation' : 'Pause animation');
+    btn.addEventListener('click', e => { e.stopPropagation(); if (userPaused) userStarted = true; setPaused(!userPaused); });
+    btn.addEventListener('pointerdown', e => e.stopPropagation());
+
+    const angleAt = e => {
+      const m = core.getScreenCTM(); if (!m) return 0;
+      const q = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse());
+      return Math.atan2(q.y, q.x);
+    };
+    svg.addEventListener('pointerdown', e => {
+      if (e.button !== 0) return;
+      dragging = true; lastAng = angleAt(e);
+      try { svg.setPointerCapture(e.pointerId); } catch (_) {}
+      wrapEl.classList.add('dragging');
+    });
+    svg.addEventListener('pointermove', e => {
+      if (!dragging) return;
+      const a = angleAt(e);
+      let da = a - lastAng;
+      if (da > Math.PI) da -= TAU; else if (da < -Math.PI) da += TAU;
+      theta += da; lastAng = a; render();
+    });
+    const endDrag = () => { if (!dragging) return; dragging = false; speed = 0; wrapEl.classList.remove('dragging'); };
+    svg.addEventListener('pointerup', endDrag);
+    svg.addEventListener('pointercancel', endDrag);
+    wrapEl.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { theta += TAU / 12; render(); e.preventDefault(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { theta -= TAU / 12; render(); e.preventDefault(); }
+      else if (e.key === ' ' || e.key === 'Enter') { if (userPaused) userStarted = true; setPaused(!userPaused); e.preventDefault(); }
+    });
+
+    new IntersectionObserver(en => { visible = en[0].isIntersecting; sync(); }, { threshold: 0.05 }).observe(wrapEl);
+    if (!reduce) setTimeout(() => { svg.classList.remove('intro'); }, 3200);
+    else svg.classList.remove('intro');
+  }
+
+  /* ---------------- Figure animations ---------------- */
+  function packetFlow(svg, specs) {
+    const layer = svgEl('g', { class: 'pk-layer' }, svg);
+    const flows = specs.map(s => {
+      const path = svg.querySelector(s.path);
+      return { path, len: path.getTotalLength(), every: s.every, speed: s.speed, cls: s.cls || '', t: s.offset || 0, items: [], onArrive: s.onArrive };
+    });
+    return {
+      step(dt) {
+        flows.forEach(f => {
+          f.t += dt;
+          if (f.t >= f.every) { f.t -= f.every; f.items.push({ c: svgEl('circle', { r: 2.6, class: 'pk ' + f.cls }, layer), s: 0 }); }
+          for (let i = f.items.length - 1; i >= 0; i--) {
+            const it = f.items[i];
+            it.s += f.speed * dt;
+            if (it.s >= f.len) { it.c.remove(); f.items.splice(i, 1); if (f.onArrive) f.onArrive(); continue; }
+            const pt = f.path.getPointAtLength(it.s);
+            it.c.setAttribute('cx', pt.x.toFixed(1)); it.c.setAttribute('cy', pt.y.toFixed(1));
+          }
+        });
+      },
+      still() {
+        flows.forEach(f => [0.35, 0.75].forEach(fr => { const pt = f.path.getPointAtLength(f.len * fr); svgEl('circle', { r: 2.6, class: 'pk ' + f.cls, cx: pt.x, cy: pt.y }, layer); }));
+      }
+    };
+  }
+  const flash = (el, cls = 'hit', ms = 380) => { el.classList.add(cls); setTimeout(() => el.classList.remove(cls), ms); };
+
+  const figAnims = {
+    quad(svg) {
+      const joints = $$('.q-j', svg).sort((a, b) => a.dataset.o - b.dataset.o), n = $('.q-n', svg);
+      let started = false;
+      if (!reduce) { joints.forEach(j => j.classList.remove('on')); n.textContent = '00'; }
+      return {
+        enter() {
+          if (started || reduce) return; started = true;
+          joints.forEach((j, i) => setTimeout(() => {
+            j.classList.add('on');
+            n.textContent = String(i + 1).padStart(2, '0');
+            const b = j.getBBox();
+            const ring = svgEl('circle', { class: 'q-pulse', cx: b.x + b.width / 2, cy: b.y + b.height / 2, r: Math.max(b.width, b.height) / 2 + 1 }, j.parentNode);
+            setTimeout(() => ring.remove(), 950);
+          }, 300 + i * 170));
+        }
+      };
+    },
+    bench(svg) {
+      const logger = $('.b-logger', svg), rows = $$('.b-row', svg);
+      let r = 0;
+      const arrive = () => { flash(logger); flash(rows[r++ % rows.length], 'hit', 600); };
+      const pf = packetFlow(svg, [
+        { path: '#b-l1', every: 0.7, speed: 55 },
+        { path: '#b-l2', every: 1.1, speed: 50, cls: 'warm', offset: 0.4 },
+        { path: '#b-l3', every: 0.55, speed: 70, onArrive: arrive },
+        { path: '#b-l4', every: 1.1, speed: 60, cls: 'warm', offset: 0.2, onArrive: arrive }
+      ]);
+      if (reduce) pf.still();
+      return { step: pf.step };
+    },
+    iot(svg) {
+      const cloud = $('.i-cloud', svg);
+      const pf = packetFlow(svg, [
+        { path: '#i-l1', every: 1.6, speed: 70, onArrive: () => flash(cloud) },
+        { path: '#i-l2', every: 1.3, speed: 60, offset: 0.5, onArrive: () => flash(cloud) },
+        { path: '#i-l3', every: 1.1, speed: 45, cls: 'warm', offset: 0.9, onArrive: () => flash(cloud) }
+      ]);
+      if (reduce) pf.still();
+      return { step: pf.step };
+    },
+    glider(svg) {
+      const path = $('.g-path', svg), g = $('.g-glider', svg), state = $('.g-state', svg), samples = $('.g-samples', svg);
+      const L = path.getTotalLength();
+      let s = L * 0.12, lastDrop = s, dive = null;
+      function place() {
+        const pt = path.getPointAtLength(s), a = path.getPointAtLength(Math.max(0, s - 1.5)), b = path.getPointAtLength(Math.min(L, s + 1.5));
+        const ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+        g.setAttribute('transform', `translate(${pt.x.toFixed(1)} ${pt.y.toFixed(1)}) rotate(${ang.toFixed(1)})`);
+        g.style.opacity = Math.max(0, Math.min(1, s / 14, (L - s) / 14)).toFixed(2);
+        const down = b.y - a.y > 0;
+        if (down !== dive) { dive = down; state.textContent = dive ? 'BUOYANCY − · DIVE' : 'BUOYANCY + · CLIMB'; svg.classList.toggle('climb', !dive); }
+        return pt;
+      }
+      if (reduce) {
+        s = L * 0.36;
+        for (let x = 8; x < s; x += 12) { const q = path.getPointAtLength(x); svgEl('circle', { class: 'g-sample static', cx: q.x.toFixed(1), cy: q.y.toFixed(1), r: 1.7 }, samples); }
+      }
+      place();
+      return {
+        step(dt) {
+          s += dt * 34;
+          if (s >= L) { s = 0; lastDrop = 0; }
+          const pt = place();
+          if (s - lastDrop >= 12) {
+            lastDrop = s;
+            const c = svgEl('circle', { class: 'g-sample', cx: pt.x.toFixed(1), cy: pt.y.toFixed(1), r: 1.7 }, samples);
+            setTimeout(() => c.remove(), 6100);
+          }
+        }
+      };
+    },
+    rover(svg) {
+      const line = $('.r-ground-line', svg), fill = $('.r-ground-fill', svg), hatch = $('#r-hatch', svg), rocker = $('.r-rocker', svg);
+      const w1 = $('.r-w1', svg), w2 = $('.r-w2', svg), body = $('.r-body', svg), a1 = $('.r-a1', svg), a2 = $('.r-a2', svg), leader = $('.r-leader', svg);
+      const P = 420, Y0 = 206, RW = 17, XC = 200, HALF = 55, H = 30, DEG = 180 / Math.PI;
+      const bumps = [[0.16, 11, 24], [0.5, 17, 19], [0.8, 7, 36]];
+      const f = u => { let y = Y0; for (const [c, h, w] of bumps) { let dx = ((u - c * P) % P + P) % P; if (dx > P / 2) dx -= P; y -= h * Math.exp(-(dx / w) * (dx / w)); } return y; };
+      const wheelY = x => { let best = Infinity; for (let i = -8; i <= 8; i++) { const dx = i / 8 * RW, cy = f(x + dx) - Math.sqrt(RW * RW - dx * dx); if (cy < best) best = cy; } return best; };
+      let off = reduce ? 150 : 40, t = 0;
+      function draw() {
+        let dl = '';
+        for (let x = 0; x <= 400; x += 5) dl += (x ? 'L' : 'M') + x + ' ' + f(x + off).toFixed(1);
+        line.setAttribute('d', dl);
+        fill.setAttribute('d', dl + 'L400 250L0 250Z');
+        hatch.setAttribute('patternTransform', `translate(${(-(off % 8)).toFixed(2)} 0) rotate(45)`);
+        const x1 = XC - HALF, x2 = XC + HALF, y1 = wheelY(x1 + off), y2 = wheelY(x2 + off);
+        const phi = Math.atan2(y2 - y1, x2 - x1), mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
+        const px = mx + H * Math.sin(phi), py = my - H * Math.cos(phi);
+        rocker.setAttribute('d', `M${x1} ${y1.toFixed(1)}L${px.toFixed(1)} ${py.toFixed(1)}L${x2} ${y2.toFixed(1)}`);
+        w1.setAttribute('transform', `translate(${x1} ${y1.toFixed(1)}) rotate(${(((x1 + off) / RW) * DEG % 360).toFixed(1)})`);
+        w2.setAttribute('transform', `translate(${x2} ${y2.toFixed(1)}) rotate(${(((x2 + off) / RW) * DEG % 360).toFixed(1)})`);
+        const bAng = phi / 2;
+        body.setAttribute('transform', `translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${(bAng * DEG).toFixed(2)})`);
+        const q1 = Math.sin(t * 0.9) * 6, q2 = Math.sin(t * 0.9 + 1.2) * 7;
+        a1.setAttribute('transform', `rotate(${q1.toFixed(2)})`);
+        a2.setAttribute('transform', `translate(12 -32) rotate(${q2.toFixed(2)})`);
+        const r1 = q1 / DEG, ex = 40 + 12 * Math.cos(r1) + 32 * Math.sin(r1), ey = -42 + 12 * Math.sin(r1) - 32 * Math.cos(r1);
+        const wx = px + ex * Math.cos(bAng) - ey * Math.sin(bAng), wy = py + ex * Math.sin(bAng) + ey * Math.cos(bAng);
+        leader.setAttribute('d', `M352 35L${(wx + 3).toFixed(1)} ${(wy - 3).toFixed(1)}`);
+      }
+      draw();
+      return { step(dt) { off += dt * 22; t += dt; draw(); } };
+    }
+  };
+
+  const figIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      const svg = en.target, a = svg._anim;
+      svg.classList.toggle('is-playing', en.isIntersecting && !reduce);
+      if (!a) return;
+      if (en.isIntersecting) { if (a.enter) a.enter(); if (a.step) play(a); }
+      else if (a.step) pause(a);
+    });
+  }, { threshold: 0.2 });
+  $$('.schem').forEach(svg => {
+    const kind = svg.dataset.anim;
+    if (kind && figAnims[kind]) { try { svg._anim = figAnims[kind](svg); } catch (err) { console.warn(err); } }
+    figIO.observe(svg);
+  });
+
+  initReducer();
+
+  mqReduce.addEventListener && mqReduce.addEventListener('change', e => {
+    reduce = e.matches;
+    if (reduce) { loops.clear(); cancelAnimationFrame(raf); raf = 0; $$('.schem').forEach(s => s.classList.remove('is-playing')); }
+  });
+
+  window.__siteReady = true;
+})();
+</script>
+</body>
+</html>
