@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgroSense Smart-Farming Sensor Network · Build log · Salim Sadman</title>
+<meta name="description" content="Build log of AgroSense, a LoRa and 4G smart-farming sensor network whose entire hardware side Salim Sadman built; published at GEn-CITy 2024.">
+<meta name="author" content="Salim Sadman">
+<link rel="canonical" href="https://salim-sadman111.github.io/projects/agrosense.html">
+<meta name="theme-color" content="#f6f5f0">
+
+<!-- Link previews (LinkedIn, WhatsApp, email) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Salim Sadman">
+<meta property="og:title" content="AgroSense Smart-Farming Sensor Network: build log">
+<meta property="og:description" content="Build log of AgroSense, a LoRa and 4G smart-farming sensor network whose entire hardware side Salim Sadman built; published at GEn-CITy 2024.">
+<meta property="og:url" content="https://salim-sadman111.github.io/projects/agrosense.html">
+<meta property="og:image" content="https://salim-sadman111.github.io/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Salim Sadman — Mechanical Engineer · Robotics, with a line drawing of a cycloidal reducer">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20fill='%231f4f9a'%20fill-rule='evenodd'%20d='M18.5%2012.0%2019.2%2013.5%2019.4%2013.6%2019.5%2013.8%2019.6%2014.0%2019.7%2014.3%2019.8%2014.7%2019.7%2015.1%2019.6%2015.6%2019.3%2016.0%2019.0%2016.4%2018.6%2016.6%2018.3%2016.7%2018.1%2016.7%2017.9%2016.7%2017.7%2016.7%2016.0%2017.1%2015.3%2018.6%2015.3%2018.8%2015.2%2019.0%2015.2%2019.2%2015.0%2019.5%2014.7%2019.8%2014.3%2020.0%2013.8%2020.2%2013.3%2020.2%2012.9%2020.2%2012.5%2020.1%2012.2%2019.9%2012.0%2019.7%2011.9%2019.6%2011.8%2019.4%2010.5%2018.3%208.9%2018.7%208.6%2018.8%208.5%2018.9%208.3%2019.0%208.0%2019.0%207.6%2019.0%207.1%2018.8%206.7%2018.6%206.3%2018.2%206.1%2017.8%205.9%2017.4%205.9%2017.1%205.9%2016.9%206.0%2016.7%206.1%2016.5%206.1%2014.8%204.8%2013.7%204.5%2013.7%204.4%2013.6%204.2%2013.5%203.9%2013.3%203.7%2012.9%203.6%2012.5%203.5%2012.0%203.6%2011.5%203.7%2011.0%203.9%2010.7%204.2%2010.4%204.4%2010.3%204.5%2010.2%204.8%2010.2%206.1%209.1%206.1%207.4%206.0%207.2%205.9%207.1%205.9%206.8%205.9%206.5%206.1%206.1%206.3%205.7%206.7%205.3%207.1%205.1%207.6%204.9%208.0%204.9%208.3%204.9%208.5%205.0%208.6%205.1%208.9%205.2%2010.5%205.6%2011.8%204.6%2011.9%204.3%2012.0%204.2%2012.2%204.0%2012.5%203.9%2012.9%203.7%2013.3%203.7%2013.8%203.7%2014.3%203.9%2014.7%204.1%2015.0%204.4%2015.2%204.7%2015.2%204.9%2015.3%205.1%2015.3%205.3%2016.0%206.8%2017.7%207.2%2017.9%207.2%2018.1%207.2%2018.3%207.2%2018.6%207.3%2019.0%207.5%2019.3%207.9%2019.6%208.3%2019.7%208.8%2019.8%209.2%2019.7%209.6%2019.6%2010.0%2019.5%2010.1%2019.4%2010.3%2019.2%2010.4ZM14.6%2012a2.6%202.6%200%201%201-5.2%200a2.6%202.6%200%201%201%205.2%200Z'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+
+<script>
+  /* Runs before the page paints: picks the theme and turns on motion (unless the visitor prefers reduced motion). */
+  (function () {
+    var root = document.documentElement, saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', dark ? 'dark' : 'light');
+    root.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
+    /* Safety net: if the main script ever fails, show everything anyway. */
+    setTimeout(function () { if (!window.__siteReady) root.classList.remove('motion'); }, 4000);
+  })();
+</script>
+
+</head>
+<body data-root="../" data-project="agrosense" data-tone="leaf">
+<!-- Build-log page. The cover photo/video, log entries and certificates on this
+     page come from data/content.js (projects.agrosense). Edit that file, not this one. -->
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="lobe" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.55 12.00 19.25 13.52 19.45 13.69 19.55 13.81 19.67 14.00 19.78 14.31 19.83 14.72 19.78 15.19 19.61 15.67 19.34 16.09 19.00 16.43 18.65 16.64 18.35 16.75 18.12 16.78 17.97 16.77 17.70 16.72 16.08 17.12 15.33 18.61 15.32 18.88 15.29 19.03 15.22 19.24 15.05 19.52 14.76 19.81 14.36 20.07 13.88 20.24 13.38 20.29 12.91 20.24 12.52 20.10 12.24 19.92 12.08 19.76 11.99 19.64 11.87 19.40 10.54 18.39 8.91 18.73 8.69 18.88 8.56 18.96 8.34 19.03 8.02 19.07 7.61 19.03 7.16 18.87 6.73 18.61 6.37 18.25 6.13 17.84 5.99 17.45 5.96 17.13 5.98 16.90 6.03 16.76 6.13 16.51 6.10 14.84 4.81 13.78 4.56 13.71 4.41 13.65 4.22 13.52 3.99 13.30 3.77 12.95 3.61 12.50 3.55 12.00 3.61 11.50 3.77 11.05 3.99 10.70 4.22 10.48 4.41 10.35 4.56 10.29 4.81 10.22 6.10 9.16 6.13 7.49 6.03 7.24 5.98 7.10 5.96 6.87 5.99 6.55 6.13 6.16 6.37 5.75 6.73 5.39 7.16 5.13 7.61 4.97 8.02 4.93 8.34 4.97 8.56 5.04 8.69 5.12 8.91 5.27 10.54 5.61 11.87 4.60 11.99 4.36 12.08 4.24 12.24 4.08 12.52 3.90 12.91 3.76 13.38 3.71 13.88 3.76 14.36 3.93 14.76 4.19 15.05 4.48 15.22 4.76 15.29 4.97 15.32 5.12 15.33 5.39 16.08 6.88 17.70 7.28 17.97 7.23 18.12 7.22 18.35 7.25 18.65 7.36 19.00 7.57 19.34 7.91 19.61 8.33 19.78 8.81 19.83 9.28 19.78 9.69 19.67 10.00 19.55 10.19 19.45 10.31 19.25 10.48ZM14.6 12a2.6 2.6 0 1 1-5.2 0a2.6 2.6 0 1 1 5.2 0Z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16.4c.6-1.5 1.8-2.3 3.2-2.3s2.6.8 3.2 2.3M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2.5 9 12 4.5 21.5 9 12 13.5z"/><path d="M6.5 11v4.6c1.5 1.4 3.5 2.2 5.5 2.2s4-.8 5.5-2.2V11M21.5 9v5"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M7 7h4v4c0 3-1.5 5-4 6M14 7h4v4c0 3-1.5 5-4 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M12 12 20 7.5M12 12v9M12 12 4 7.5"/></symbol>
+  <symbol id="i-motor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4.5v3M12 16.5v3M4.5 12h3M16.5 12h3"/></symbol>
+  <symbol id="i-legs" viewBox="0 0 24 24"><path d="M7 4h10M9.5 4 7 10.5l4 5-1 3.5M14.5 4 17 10.5l-4 5 1 3.5"/><path d="M3 20.5c1.5-.9 3-.9 4.5 0s3 .9 4.5 0 3-.9 4.5 0 3 .9 4.5 0"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.7 5.3 3.7 8.5s-1.3 6.1-3.7 8.5c-2.4-2.4-3.7-5.3-3.7-8.5S9.6 5.9 12 3.5z"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="m7 9.5 3 2.5-3 2.5M12.5 15H17"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7"/><path d="M12 2.5V5M12 19v2.5M21.5 12H19M5 12H2.5M18.7 5.3 17 7M7 17l-1.7 1.7M18.7 18.7 17 17M7 7 5.3 5.3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5 7 21l5-2.5 5 2.5-1.5-7.5"/></symbol>
+  <symbol id="i-rover" viewBox="0 0 24 24"><rect x="4.5" y="8.5" width="15" height="4.5" rx="1"/><path d="M16 8.5V5h2.5M6 15.8 8 13M12 15.8V13M18 15.8 16 13"/><circle cx="6" cy="18" r="2.2"/><circle cx="12" cy="18" r="2.2"/><circle cx="18" cy="18" r="2.2"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M4 10.5c0-1.4 1.6-2.2 3.5-2.2H16l3.5 2.2-3.5 2.2H7.5C5.6 12.7 4 11.9 4 10.5zM3 17.5c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 20.5V11M12 11c0-3.6 2.6-6 6.5-6 0 3.6-2.6 6-6.5 6zM12 13.5c0-2.8-2.1-4.8-5.5-4.8 0 2.8 2.1 4.8 5.5 4.8zM7.5 20.5h9"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html" aria-label="Salim Sadman, home page">
+      <svg class="brand-mark" aria-hidden="true"><use href="#lobe"/></svg>
+      <span>Salim Sadman</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#overview">Overview</a>
+      <a href="#how">How it works</a>
+      <a href="#log">Build log</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#more">More projects</a>
+      <a href="../index.html#contact">Contact</a>
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="../Salim_Sadman_CV.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>CV</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="sun-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <mask id="moon-mask"><rect width="24" height="24" fill="#fff"/><circle class="cut" cx="26" cy="2" r="6.5" fill="#000"/></mask>
+          <circle class="core" cx="12" cy="12" r="4.6" fill="currentColor" mask="url(#moon-mask)"/>
+          <g class="rays" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 2.2v2.2M12 19.6v2.2M2.2 12h2.2M19.6 12h2.2M5.1 5.1l1.5 1.5M17.4 17.4l1.5 1.5M5.1 18.9l1.5-1.5M17.4 6.6l1.5-1.5"/>
+          </g>
+        </svg>
+      </button>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="m1" d="M4 7h16"/><path class="m2" d="M4 12h16"/><path class="m3" d="M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+<div class="mobile-menu" id="mobile-menu" inert>
+  <div class="wrap">
+    <a href="#overview">Overview <span>—</span></a>
+    <a href="#how">How it works <span>01</span></a>
+    <a href="#log">Build log <span>02</span></a>
+    <a href="#certificates">Certificates &amp; Crests <span>03</span></a>
+    <a href="#more">More projects <span>04</span></a>
+    <a href="../index.html">Home <span>←</span></a>
+    <a href="../index.html#contact">Contact <span>↗</span></a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============================== OVERVIEW ============================== -->
+<section class="p-hero" id="overview" data-tone="leaf" aria-labelledby="p-title">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html#research"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>All projects</a><span class="sep">/</span><span>Build log</span></nav>
+    <div class="p-grid">
+      <div class="p-text">
+        <p class="eyebrow anim" style="--d:0">SystemSage Solutions Sdn. Bhd. · Jan 2024 – Jan 2025</p>
+        <h1 class="p-title anim" style="--d:1" id="p-title">AgroSense: Smart-Farming Sensor Network</h1>
+        <p class="p-summary anim" style="--d:2">Field nodes read soil nutrients and send them over LoRa to a gateway, which uploads them over 4G to a cloud dashboard; a control module switches pumps and lights manually, on range-based rules or on a schedule.</p>
+        <p class="p-role anim" style="--d:3">IoT Engineer (Hardware Engineering). I built the entire hardware side; teammates built the website and the Firebase receiving end.</p>
+        <ul class="facts anim" style="--d:4">
+          <li class="fact"><b>Whole hardware side</b><span>PCBs, wiring, firmware and solar power</span></li>
+          <li class="fact"><b>LoRa + 4G</b><span>star network to a gateway, 4G upload to the cloud</span></li>
+          <li class="fact"><b>Three control modes</b><span>manual, range-based rules, schedule</span></li>
+          <li class="fact"><b>GEn-CITy 2024</b><span>published paper <a href="../index.html#p1">[P1]</a></span></li>
+        </ul>
+      </div>
+      <figure class="p-cover fig">
+        <div class="media media-slot" data-cover="agrosense" style="view-transition-name:cover-agrosense">
+          <div class="fallback" data-label="Schematic">
+            <svg class="schem schem-agro" data-anim="agro" viewBox="0 0 400 250" role="img" aria-labelledby="ag-title">
+              <title id="ag-title">Animated schematic of AgroSense: solar-powered child nodes read a 7-in-1 soil sensor and send the data over LoRa to a gateway, which uploads it over 4G to the cloud; a control module switches pumps and lights through relays.</title>
+              <defs><pattern id="ag-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="s-hatch" x1="0" y1="0" x2="0" y2="7"/></pattern></defs>
+              <text class="s-cap" x="16" y="30">LoRa STAR NETWORK</text>
+              <g><circle class="s-line s-fill" cx="32" cy="66" r="8"/><g class="i-rays"><path class="s-thin" d="M32 51v5M32 76v5M17 66h5M42 66h5M21.4 55.4l3.5 3.5M39.1 73.1l3.5 3.5M21.4 76.6l3.5-3.5M39.1 58.9l3.5-3.5"/></g></g>
+              <path class="s-line s-fill i-cloud" d="M300 76H362A12 12 0 0 0 362 52A17 17 0 0 0 330 44A13 13 0 0 0 306 54A11 11 0 0 0 300 76Z"/>
+              <text class="s-cap" x="331" y="67" text-anchor="middle">CLOUD</text>
+              <path class="s-link dash i-l1" d="M70 114C120 70 200 70 250 90"/>
+              <path class="s-link dash i-l2" d="M146 114C180 96 220 92 248 92"/>
+              <path class="s-link dash i-l3" d="M252 88C262 60 280 54 294 60"/>
+              <path class="s-link dash i-l4" d="M334 76C336 100 338 130 338 162"/>
+              <text class="s-cap" x="160" y="68" text-anchor="middle">LoRa</text>
+              <text class="s-cap" x="258" y="58" text-anchor="end">4G</text>
+              <text class="s-cap" x="330" y="124" text-anchor="end">FIREBASE</text>
+              <rect x="16" y="206" width="368" height="10" fill="url(#ag-hatch)"/>
+              <line class="s-line" x1="16" y1="206" x2="384" y2="206"/>
+              <path class="s-thin" d="M24 206v-7m0 3-3-3m3 3 3-3M40 206v-7m0 3-3-3m3 3 3-3M100 206v-7m0 3-3-3m3 3 3-3M116 206v-7m0 3-3-3m3 3 3-3M180 206v-7m0 3-3-3m3 3 3-3M196 206v-7m0 3-3-3m3 3 3-3M284 206v-7m0 3-3-3m3 3 3-3M300 206v-7m0 3-3-3m3 3 3-3M372 206v-7m0 3-3-3m3 3 3-3"/>
+              <g transform="translate(64 0)" style="--dl:0s">
+                <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+                <rect class="s-line s-fill" x="-13" y="128" width="26" height="22" rx="3"/>
+                <path class="s-line s-fill" d="M-24 124 4 116 6 122-22 130Z"/>
+                <line class="s-line" x1="6" y1="128" x2="6" y2="114"/>
+                <circle class="s-line s-fill" cx="6" cy="112" r="2"/>
+                <circle class="i-ring" cx="6" cy="112" r="6"/><circle class="i-ring d2" cx="6" cy="112" r="6"/>
+                <path class="s-line" d="M-8 206v16M-11 222h6"/>
+              </g>
+              <g transform="translate(140 0)" style="--dl:.6s">
+                <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+                <rect class="s-line s-fill" x="-13" y="128" width="26" height="22" rx="3"/>
+                <path class="s-line s-fill" d="M-24 124 4 116 6 122-22 130Z"/>
+                <line class="s-line" x1="6" y1="128" x2="6" y2="114"/>
+                <circle class="s-line s-fill" cx="6" cy="112" r="2"/>
+                <circle class="i-ring" cx="6" cy="112" r="6"/><circle class="i-ring d2" cx="6" cy="112" r="6"/>
+                <path class="s-line" d="M-8 206v16M-11 222h6"/>
+              </g>
+              <g transform="translate(240 0)">
+                <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+                <rect class="s-box accent i-gw" x="-22" y="118" width="44" height="32" rx="4"/>
+                <line class="s-line" x1="10" y1="118" x2="10" y2="92"/>
+                <circle class="s-line s-fill" cx="10" cy="90" r="2.2"/>
+                <text class="s-title" x="0" y="138" text-anchor="middle">MOTHER</text>
+              </g>
+              <line class="s-line" x1="338" y1="190" x2="338" y2="206"/>
+              <rect class="s-box i-relay" x="318" y="162" width="40" height="28" rx="4"/>
+              <path class="s-thin" d="M323 175h6v8h-6zM331 175h6v8h-6zM339 175h6v8h-6zM347 175h6v8h-6z"/>
+              <circle class="i-led" cx="351" cy="168.5" r="2.2"/>
+              <path class="s-thin" d="M358 176h9"/>
+              <circle class="s-line s-fill" cx="373" cy="173" r="5.5"/>
+              <path class="s-thin" d="M371 180.5h4M371.5 183h3"/>
+              <text class="s-cap" x="102" y="238" text-anchor="middle">CHILD NODES · SOIL SENSORS</text>
+              <text class="s-cap" x="240" y="238" text-anchor="middle">GATEWAY · 4G</text>
+              <text class="s-cap" x="340" y="238" text-anchor="middle">CONTROL · RELAYS</text>
+            </svg>
+          </div>
+        </div>
+        <figcaption><span class="cap-text" data-photo-caption="">System architecture: child nodes → LoRa → gateway → 4G → cloud, and cloud → control module → relays.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== HOW IT WORKS ============================== -->
+<section class="section" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">01</span><span class="sec-rule"></span><h2 id="how-title">How it works</h2></div>
+    <div class="how-grid">
+      <div class="how-text reveal">
+        <p>Child Modules, the field nodes, read a 7-in-1 soil sensor (nitrogen, phosphorus, potassium, pH, moisture, temperature and conductivity) and send the readings over LoRa to a Mother Module, the gateway, in a star network. The gateway uploads them over 4G to a cloud database behind the web dashboard.</p>
+        <p>Some of the data also goes to Firebase, where a Control Module picks it up and switches equipment such as pumps or lights through relays: manually from the website, automatically when a reading leaves a set range, or on a schedule. The field nodes run on solar power with battery backup.</p>
+        <p class="note">Hardware: ESP32 · LoRa · SIMCom A7670C (4G) · RS485 7-in-1 soil sensor · BME280 · custom PCBs · 4-channel relay module · solar panel, battery and charge controller.</p>
+      </div>
+      <div class="reveal">
+        <p class="mini-title">Results reported in the paper <a href="../index.html#p1">[P1]</a></p>
+        <div class="results four">
+          <div class="result"><b>500 m</b><span>LoRa link range tested</span></div>
+          <div class="result"><b>&lt;&thinsp;0.1%</b><span>packets lost: fewer than 1 in 1,000</span></div>
+          <div class="result"><b>3 days</b><span>on battery without enough sunlight</span></div>
+          <div class="result"><b>≤&thinsp;3 s</b><span>relay response in poor conditions; almost instant in good ones</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Shown only once a cover photo replaces the drawing at the top of the page -->
+    <figure class="fig how-fig if-cover">
+      <div class="media">
+        <svg class="schem schem-agro" data-anim="agro" viewBox="0 0 400 250" role="img" aria-labelledby="ag-title-2">
+          <title id="ag-title-2">Animated schematic of AgroSense: solar-powered child nodes read a 7-in-1 soil sensor and send the data over LoRa to a gateway, which uploads it over 4G to the cloud; a control module switches pumps and lights through relays.</title>
+          <defs><pattern id="ag-hatch-2" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="s-hatch" x1="0" y1="0" x2="0" y2="7"/></pattern></defs>
+          <text class="s-cap" x="16" y="30">LoRa STAR NETWORK</text>
+          <g><circle class="s-line s-fill" cx="32" cy="66" r="8"/><g class="i-rays"><path class="s-thin" d="M32 51v5M32 76v5M17 66h5M42 66h5M21.4 55.4l3.5 3.5M39.1 73.1l3.5 3.5M21.4 76.6l3.5-3.5M39.1 58.9l3.5-3.5"/></g></g>
+          <path class="s-line s-fill i-cloud" d="M300 76H362A12 12 0 0 0 362 52A17 17 0 0 0 330 44A13 13 0 0 0 306 54A11 11 0 0 0 300 76Z"/>
+          <text class="s-cap" x="331" y="67" text-anchor="middle">CLOUD</text>
+          <path class="s-link dash i-l1" d="M70 114C120 70 200 70 250 90"/>
+          <path class="s-link dash i-l2" d="M146 114C180 96 220 92 248 92"/>
+          <path class="s-link dash i-l3" d="M252 88C262 60 280 54 294 60"/>
+          <path class="s-link dash i-l4" d="M334 76C336 100 338 130 338 162"/>
+          <text class="s-cap" x="160" y="68" text-anchor="middle">LoRa</text>
+          <text class="s-cap" x="258" y="58" text-anchor="end">4G</text>
+          <text class="s-cap" x="330" y="124" text-anchor="end">FIREBASE</text>
+          <rect x="16" y="206" width="368" height="10" fill="url(#ag-hatch-2)"/>
+          <line class="s-line" x1="16" y1="206" x2="384" y2="206"/>
+          <path class="s-thin" d="M24 206v-7m0 3-3-3m3 3 3-3M40 206v-7m0 3-3-3m3 3 3-3M100 206v-7m0 3-3-3m3 3 3-3M116 206v-7m0 3-3-3m3 3 3-3M180 206v-7m0 3-3-3m3 3 3-3M196 206v-7m0 3-3-3m3 3 3-3M284 206v-7m0 3-3-3m3 3 3-3M300 206v-7m0 3-3-3m3 3 3-3M372 206v-7m0 3-3-3m3 3 3-3"/>
+          <g transform="translate(64 0)" style="--dl:0s">
+            <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+            <rect class="s-line s-fill" x="-13" y="128" width="26" height="22" rx="3"/>
+            <path class="s-line s-fill" d="M-24 124 4 116 6 122-22 130Z"/>
+            <line class="s-line" x1="6" y1="128" x2="6" y2="114"/>
+            <circle class="s-line s-fill" cx="6" cy="112" r="2"/>
+            <circle class="i-ring" cx="6" cy="112" r="6"/><circle class="i-ring d2" cx="6" cy="112" r="6"/>
+            <path class="s-line" d="M-8 206v16M-11 222h6"/>
+          </g>
+          <g transform="translate(140 0)" style="--dl:.6s">
+            <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+            <rect class="s-line s-fill" x="-13" y="128" width="26" height="22" rx="3"/>
+            <path class="s-line s-fill" d="M-24 124 4 116 6 122-22 130Z"/>
+            <line class="s-line" x1="6" y1="128" x2="6" y2="114"/>
+            <circle class="s-line s-fill" cx="6" cy="112" r="2"/>
+            <circle class="i-ring" cx="6" cy="112" r="6"/><circle class="i-ring d2" cx="6" cy="112" r="6"/>
+            <path class="s-line" d="M-8 206v16M-11 222h6"/>
+          </g>
+          <g transform="translate(240 0)">
+            <line class="s-line" x1="0" y1="206" x2="0" y2="150"/>
+            <rect class="s-box accent i-gw" x="-22" y="118" width="44" height="32" rx="4"/>
+            <line class="s-line" x1="10" y1="118" x2="10" y2="92"/>
+            <circle class="s-line s-fill" cx="10" cy="90" r="2.2"/>
+            <text class="s-title" x="0" y="138" text-anchor="middle">MOTHER</text>
+          </g>
+          <line class="s-line" x1="338" y1="190" x2="338" y2="206"/>
+          <rect class="s-box i-relay" x="318" y="162" width="40" height="28" rx="4"/>
+          <path class="s-thin" d="M323 175h6v8h-6zM331 175h6v8h-6zM339 175h6v8h-6zM347 175h6v8h-6z"/>
+          <circle class="i-led" cx="351" cy="168.5" r="2.2"/>
+          <path class="s-thin" d="M358 176h9"/>
+          <circle class="s-line s-fill" cx="373" cy="173" r="5.5"/>
+          <path class="s-thin" d="M371 180.5h4M371.5 183h3"/>
+          <text class="s-cap" x="102" y="238" text-anchor="middle">CHILD NODES · SOIL SENSORS</text>
+          <text class="s-cap" x="240" y="238" text-anchor="middle">GATEWAY · 4G</text>
+          <text class="s-cap" x="340" y="238" text-anchor="middle">CONTROL · RELAYS</text>
+        </svg>
+      </div>
+      <figcaption>System architecture: child nodes → LoRa → gateway → 4G → cloud, and cloud → control module → relays.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================== BUILD LOG ==============================
+     Entries come from data/content.js → projects.agrosense.log -->
+<section class="section" id="log" data-tone="leaf" aria-labelledby="log-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">02</span><span class="sec-rule"></span><h2 id="log-title">Build log</h2></div>
+    <p class="sec-intro reveal">From choosing the cellular link to the published paper.</p>
+    <ol class="log" data-log="agrosense"></ol>
+  </div>
+</section>
+
+<!-- ============================== CERTIFICATES ==============================
+     Shows the certificates in data/content.js whose projects list includes "agrosense". -->
+<section class="section" id="certificates" aria-labelledby="certs-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">03</span><span class="sec-rule"></span><h2 id="certs-title">Certificates &amp; Crests</h2></div>
+    <div class="cert-tools" role="group" aria-label="Show"></div>
+    <div class="cert-grid reveal" data-certs="project"></div>
+  </div>
+</section>
+
+<!-- ============================== MORE PROJECTS ============================== -->
+<section class="section" id="more" aria-labelledby="more-title">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">04</span><span class="sec-rule"></span><h2 id="more-title">More projects</h2></div>
+    <div class="more-grid" data-more></div>
+    <div class="page-end reveal">
+      <a class="btn btn-ghost" href="../index.html#research"><svg class="ic back" aria-hidden="true"><use href="#i-arrow"/></svg>All projects</a>
+      <a class="btn btn-primary" href="../index.html#contact"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Get in touch</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Salim Sadman</p>
+    <p>Last updated September 2026 · Plain HTML, CSS and JavaScript on GitHub Pages</p>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="Back to top">
+  <svg class="ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23"/></svg>
+  <svg class="ic" aria-hidden="true"><use href="#i-up"/></svg>
+</button>
+<div class="toast" role="status" aria-live="polite"></div>
+<dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+  <button class="lb-close" type="button" aria-label="Close">×</button>
+  <div class="lb-body"></div>
+  <div class="lb-foot"><span class="lb-cap"></span><a class="lb-link" target="_blank" rel="noopener" hidden></a></div>
+</dialog>
+
+<!-- Photos, videos, build logs and certificates: edit data/content.js -->
+<script src="../data/content.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
